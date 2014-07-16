@@ -9,7 +9,7 @@ using Xamarin.Social;
 
 namespace SocialIntegration
 {
-    [Activity(Label = "SocialIntegration", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "SocialIntegration", MainLauncher = false, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         //private ISocialMediaProvider SocialMediaProvider = null;

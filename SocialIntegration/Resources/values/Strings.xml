@@ -3,6 +3,7 @@
 
   <string name="ApplicationName">Social Integration</string>
   
+  <string name="LoginButton">Log In</string>
   <string name="LoginFacebookButton">Login with facebook</string>
   <string name="LoginTwitterButton">Login with twitter</string>
   <string name="ShareFacebookButton">Share with facebook</string>

@@ -50,6 +50,9 @@ namespace SocialIntegration
 			// aapt resource value: 0x7f020001
 			public const int monoandroidsplash = 2130837505;
 			
+			// aapt resource value: 0x7f020002
+			public const int splash_new = 2130837506;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -64,16 +67,22 @@ namespace SocialIntegration
 		{
 			
 			// aapt resource value: 0x7f060000
-			public const int LoginFacebookButton = 2131099648;
-			
-			// aapt resource value: 0x7f060001
-			public const int LoginTwitterButton = 2131099649;
+			public const int LoginButton = 2131099648;
 			
 			// aapt resource value: 0x7f060002
-			public const int ShareFacebookButton = 2131099650;
+			public const int LoginFacebookButton = 2131099650;
 			
 			// aapt resource value: 0x7f060003
-			public const int ShareTwitterButton = 2131099651;
+			public const int LoginTwitterButton = 2131099651;
+			
+			// aapt resource value: 0x7f060004
+			public const int ShareFacebookButton = 2131099652;
+			
+			// aapt resource value: 0x7f060005
+			public const int ShareTwitterButton = 2131099653;
+			
+			// aapt resource value: 0x7f060001
+			public const int SplashImage = 2131099649;
 			
 			static Id()
 			{
@@ -89,7 +98,10 @@ namespace SocialIntegration
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int InitialScreen = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Main = 2130903041;
 			
 			static Layout()
 			{
@@ -108,16 +120,19 @@ namespace SocialIntegration
 			public const int ApplicationName = 2130968576;
 			
 			// aapt resource value: 0x7f040001
-			public const int LoginFacebookButton = 2130968577;
+			public const int LoginButton = 2130968577;
 			
 			// aapt resource value: 0x7f040002
-			public const int LoginTwitterButton = 2130968578;
+			public const int LoginFacebookButton = 2130968578;
 			
 			// aapt resource value: 0x7f040003
-			public const int ShareFacebookButton = 2130968579;
+			public const int LoginTwitterButton = 2130968579;
 			
 			// aapt resource value: 0x7f040004
-			public const int ShareTwitterButton = 2130968580;
+			public const int ShareFacebookButton = 2130968580;
+			
+			// aapt resource value: 0x7f040005
+			public const int ShareTwitterButton = 2130968581;
 			
 			static String()
 			{
