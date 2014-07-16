@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="ApplicationName">Social Integration</string>
+  
+  <string name="LoginFacebookButton">Login with facebook</string>
+  <string name="LoginTwitterButton">Login with twitter</string>
+  <string name="ShareFacebookButton">Share with facebook</string>
+  <string name="ShareTwitterButton">Share with twitter</string>
+</resources>

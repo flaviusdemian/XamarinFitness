@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <Button
+        android:id="@+id/LoginFacebookButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/LoginFacebookButton" />
+    <Button
+        android:id="@+id/LoginTwitterButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/LoginTwitterButton" />
+    <Button
+        android:id="@+id/ShareFacebookButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ShareFacebookButton" />
+    <Button
+        android:id="@+id/ShareTwitterButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ShareTwitterButton" />
+</LinearLayout>
