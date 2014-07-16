@@ -18,6 +18,12 @@ namespace SocialIntegration
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.InitialScreen);
+            Button LogIn = FindViewById<Button>(Resource.Id.LoginButton);
+
+            LogIn.Click += delegate
+            {
+                StartActivity(typeof(MainActivity));
+            };
 
         }
     }
