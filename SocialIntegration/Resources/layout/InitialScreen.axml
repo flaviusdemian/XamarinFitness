@@ -2,17 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="@drawable/splash_new">
+<!--android:layout_above="@id/LoginButton"-->
+<!--<ImageView
+        android:src="@drawable/splash_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SplashImage" />-->
     <Button
         android:id="@+id/LoginButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/LoginButton"
-        android:layout_alignParentBottom="true" />
-    <ImageView
-        android:src="@drawable/splash_new"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/LoginButton"
-        android:id="@+id/SplashImage" />
+        android:layout_alignParentBottom="true"
+        android:background="#00bcd4" />
 </RelativeLayout>

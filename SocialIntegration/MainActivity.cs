@@ -22,7 +22,8 @@ namespace SocialIntegration
         private const string TwitterConsumerKey = "";
         private const string TwitterConsumerSecret = "";
 
-        private Button btn_LoginWithFacebook, btn_LoginWithtwitter, btn_ShareWithFacebook, btn_ShareWithtwitter;
+        private ImageButton btn_LoginWithFacebook, btn_LoginWithtwitter; 
+        private Button btn_ShareWithFacebook, btn_ShareWithtwitter;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -33,10 +34,10 @@ namespace SocialIntegration
 
             // Get our button from the layout resource,
             // and attach an event to it
-            btn_LoginWithFacebook = FindViewById<Button>(Resource.Id.LoginFacebookButton);
+            btn_LoginWithFacebook = FindViewById<ImageButton>(Resource.Id.LoginFacebookButton);
             btn_LoginWithFacebook.Click += (sender, args) => LoginWithFacebook();
 
-            btn_LoginWithtwitter = FindViewById<Button>(Resource.Id.LoginTwitterButton);
+            btn_LoginWithtwitter = FindViewById<ImageButton>(Resource.Id.LoginTwitterButton);
             btn_LoginWithtwitter.Click += (sender, args) => LoginWithTwitter();
 
             btn_ShareWithFacebook = FindViewById<Button>(Resource.Id.ShareFacebookButton);
