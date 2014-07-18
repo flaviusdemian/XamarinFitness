@@ -12,8 +12,8 @@ using Android.Widget;
 
 namespace SocialIntegration
 {
-    [Activity(Label = "Dashboard", MainLauncher = true, Icon = "@drawable/icon")]
-    public class Dashboard : Activity
+    [Activity(Label = "Equipment Selection", MainLauncher = false, Icon = "@drawable/icon")]
+    public class EquipmentSelection : Activity
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -22,16 +22,16 @@ namespace SocialIntegration
                 base.OnCreate(bundle);
                 RequestWindowFeature(WindowFeatures.NoTitle);
 
-                SetContentView(Resource.Layout.Dashboard);
-                Button btn_CreateWorkout = FindViewById<Button>(Resource.Id.CreateWorkout);
-                Button btn_Stats = FindViewById<Button>(Resource.Id.Stats);
+                SetContentView(Resource.Layout.EquipmentSelection);
+                Button btn_Equip = FindViewById<Button>(Resource.Id.Equip);
+                Button btn_wEquip = FindViewById<Button>(Resource.Id.wEquip);
 
-                btn_CreateWorkout.Click += delegate
+                btn_Equip.Click += delegate
                 {
-                    StartActivity(typeof(GoalSelection));
+                    StartActivity(typeof(WorkoutScreen));
                 };
             }
-             catch (Exception ex)
+            catch (Exception ex)
             {
                 ex.ToString();
                 throw;

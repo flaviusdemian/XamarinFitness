@@ -12,8 +12,8 @@ using Android.Widget;
 
 namespace SocialIntegration
 {
-    [Activity(Label = "Dashboard", MainLauncher = true, Icon = "@drawable/icon")]
-    public class Dashboard : Activity
+    [Activity(Label = "Workout Screen", MainLauncher = false, Icon = "@drawable/icon")]
+    public class WorkoutScreen : Activity
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -22,16 +22,10 @@ namespace SocialIntegration
                 base.OnCreate(bundle);
                 RequestWindowFeature(WindowFeatures.NoTitle);
 
-                SetContentView(Resource.Layout.Dashboard);
-                Button btn_CreateWorkout = FindViewById<Button>(Resource.Id.CreateWorkout);
-                Button btn_Stats = FindViewById<Button>(Resource.Id.Stats);
+                SetContentView(Resource.Layout.WorkoutScreen);
 
-                btn_CreateWorkout.Click += delegate
-                {
-                    StartActivity(typeof(GoalSelection));
-                };
             }
-             catch (Exception ex)
+            catch (Exception ex)
             {
                 ex.ToString();
                 throw;

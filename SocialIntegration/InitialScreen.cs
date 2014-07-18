@@ -11,7 +11,7 @@ using Android.Views;
 
 namespace SocialIntegration
 {
-    [Activity(Label = "SocialIntegration v2", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "SocialIntegration v2", MainLauncher = false, Icon = "@drawable/icon")]
     public class InitialScreen : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -27,9 +27,8 @@ namespace SocialIntegration
                 LogIn.Click += delegate
                 {
                     StartActivity(typeof(MainActivity));
-                    StartActivity(typeof(MainActivity));
                 };
-                Toast.MakeText(this, "Ops", ToastLength.Long).Show();
+                //Toast.MakeText(this, "Ops", ToastLength.Long).Show();
             }
             catch (Exception ex)
             {
