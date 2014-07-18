@@ -48,10 +48,10 @@ namespace SocialIntegration
 			public const int backrepeat = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int button_facebook = 2130837505;
+			public const int button_facebook_retina = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int button_twitter = 2130837506;
+			public const int button_twitter_retina = 2130837506;
 			
 			// aapt resource value: 0x7f020003
 			public const int Icon = 2130837507;
@@ -63,7 +63,10 @@ namespace SocialIntegration
 			public const int pattern = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int splash_new = 2130837510;
+			public const int splash = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int splash_new = 2130837511;
 			
 			static Drawable()
 			{

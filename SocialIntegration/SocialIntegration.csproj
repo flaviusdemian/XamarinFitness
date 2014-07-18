@@ -75,15 +75,16 @@
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Properties\AndroidManifest.xml" />
+    <Content Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <AndroidResource Include="Resources\drawable\splash_new.png" />
     <AndroidResource Include="Resources\drawable\backrepeat.xml" />
     <AndroidResource Include="Resources\drawable\pattern.png" />
-    <AndroidResource Include="Resources\drawable\button_facebook.png" />
-    <AndroidResource Include="Resources\drawable\button_twitter.png" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\drawable\button_facebook_retina.png" />
+    <AndroidResource Include="Resources\drawable\button_twitter_retina.png" />
+    <AndroidResource Include="Resources\drawable\splash.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.social">

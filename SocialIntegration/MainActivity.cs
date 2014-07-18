@@ -6,10 +6,11 @@ using Android.OS;
 using Android.Widget;
 using SocialIntegrationCore.Implementation;
 using Xamarin.Social;
+using Android.Views;
 
 namespace SocialIntegration
 {
-    [Activity(Label = "SocialIntegration", MainLauncher = false, Icon = "@drawable/icon")]
+    [Activity(Label = "SocialIntegration2", MainLauncher = false, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         //private ISocialMediaProvider SocialMediaProvider = null;
