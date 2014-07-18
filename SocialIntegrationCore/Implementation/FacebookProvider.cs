@@ -18,25 +18,27 @@ namespace SocialIntegrationCore.Implementation
         public String AccessToken { get; set; }
         public String AccessTokenSecret { get; set; }
 
-        public FacebookProvider(string facebookAppId, string clientSecret, Activity destinationActivity)
+        public FacebookProvider(string facebookAppId, string clientSecret)
         {
             _FacebookService.ClientId = facebookAppId;
             _FacebookService.ClientSecret = clientSecret;
         }
 
-        public void Login(Activity destinationActivity)
+        public void Login(Activity currentActivity, Type destinationActivityType)
         {
             try
             {
-                Intent intent = _FacebookService.GetAuthenticateUI(destinationActivity, delegate(Account account)
+                Intent intent = _FacebookService.GetAuthenticateUI(currentActivity, delegate(Account account)
                 {
                     if (account != null)
                     {
                         AccessToken = account.Properties["access_token"];
                         _Account = account;
+                        currentActivity.StartActivity(destinationActivityType);
                     }
                 });
-                destinationActivity.StartActivity(intent);
+                currentActivity.StartActivity(intent);
+                
             }
             catch (Exception ex)
             {

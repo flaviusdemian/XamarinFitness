@@ -25,21 +25,22 @@ namespace SocialIntegrationCore.Implementation
             _TwitterService.CallbackUrl = new Uri(callbackUrl);
         }
 
-        public void Login(Activity destinationActivity)
+        public void Login(Activity currentActivity, Type destinationActivityType)
         {
             try
             {
-                Intent intent = _TwitterService.GetAuthenticateUI(destinationActivity, delegate(Account account)
+                Intent intent = _TwitterService.GetAuthenticateUI(currentActivity, delegate(Account account)
                 {
                     if (account != null)
                     {
                         _Account = account;
                         AccessToken = account.Properties["oauth_token"];
                         AccessTokenSecret = account.Properties["oauth_token_secret"];
+                        currentActivity.StartActivity(destinationActivityType);
                     }
                 });
 
-                destinationActivity.StartActivity(intent);
+                currentActivity.StartActivity(intent);
             }
             catch (Exception ex)
             {

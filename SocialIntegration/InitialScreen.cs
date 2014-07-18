@@ -27,6 +27,7 @@ namespace SocialIntegration
                 LogIn.Click += delegate
                 {
                     StartActivity(typeof(MainActivity));
+                    StartActivity(typeof(MainActivity));
                 };
                 Toast.MakeText(this, "Ops", ToastLength.Long).Show();
             }

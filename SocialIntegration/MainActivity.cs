@@ -52,8 +52,8 @@ namespace SocialIntegration
         {
             try
             {
-                var socialMediaProvider = new FacebookProvider(FacebookAppId, ClientSecret, this);
-                socialMediaProvider.Login(this);
+                var socialMediaProvider = new FacebookProvider(FacebookAppId, ClientSecret);
+                socialMediaProvider.Login(this, typeof(Dashboard));
             }
             catch (Exception ex)
             {
@@ -66,7 +66,7 @@ namespace SocialIntegration
             try
             {
                 var socialMediaProvider = new TwitterProvider(TwitterConsumerKey, TwitterConsumerSecret, "http://www.google.ro");
-                socialMediaProvider.Login(this);
+                socialMediaProvider.Login(this, typeof(Dashboard));
             }
             catch (Exception ex)
             {
@@ -99,7 +99,7 @@ namespace SocialIntegration
         {
             try
             {
-                var socialMediaProvider = new FacebookProvider(FacebookAppId, ClientSecret, this);
+                var socialMediaProvider = new FacebookProvider(FacebookAppId, ClientSecret);
                 var item = new Item
                 {
                     Text = "I'm sharing great things using #Xamarin #FTW!",

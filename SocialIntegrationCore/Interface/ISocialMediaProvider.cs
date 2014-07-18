@@ -11,7 +11,7 @@ namespace SocialIntegrationCore.Interface
         String AccessToken { get; set; }
 
         String AccessTokenSecret { get; set; }
-        void Login(Activity destinationActivity);
+        void Login(Activity currentActivity, Type destinationActivityType);
 
         Task<bool> Post(Activity destinationActivity, Item item);
     }
