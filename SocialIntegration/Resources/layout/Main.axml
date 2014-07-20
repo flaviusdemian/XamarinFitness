@@ -14,7 +14,7 @@
         android:layout_marginBottom="25dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:src="@drawable/button_facebook_retina"
+        android:src="@drawable/facebook_button"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:padding="0dp" />
@@ -25,7 +25,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:layout_marginBottom="25dp"
-        android:src="@drawable/button_twitter_retina"
+        android:src="@drawable/twitter_button"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:padding="0dp" />

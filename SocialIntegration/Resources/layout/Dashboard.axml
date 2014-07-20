@@ -4,17 +4,22 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:background="@drawable/backrepeat">
     <Button
         android:text="@string/Stats"
+        android:textColor="#777f20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Stats"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/app_buttons" />
     <Button
         android:text="@string/CreateWorkout"
+        android:textColor="#777f20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/Stats"
-        android:id="@+id/CreateWorkout" />
+        android:id="@+id/CreateWorkout"
+        android:background="@drawable/app_buttons" />
 </RelativeLayout>

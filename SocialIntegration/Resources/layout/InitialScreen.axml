@@ -10,5 +10,5 @@
         android:layout_height="wrap_content"
         android:text="@string/LoginButton"
         android:layout_alignParentBottom="true"
-        android:background="#00bcd4" />
+        android:background="@drawable/splash_button" />
 </RelativeLayout>
