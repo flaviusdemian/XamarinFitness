@@ -4,18 +4,27 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <Button
-        android:text="Beginner"
+        android:text="BEGINNER"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Beginner" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selection_buttons"
+        android:id="@+id/Beginner"
+        style="@style/button_text" />
     <Button
-        android:text="Intermediate"
+        android:text="INTERMEDIATE"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Intermediate" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selection_buttons"
+        android:id="@+id/Intermediate"
+        style="@style/button_text" />
     <Button
-        android:text="Advanced"
+        android:text="ADVANCED"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Advanced" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selection_buttons"
+        android:id="@+id/Advanced"
+        style="@style/button_text" />
 </LinearLayout>

@@ -4,18 +4,27 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <Button
-        android:text="15 Min"
+        android:text="15 MIN."
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/t15min" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selection_buttons"
+        android:id="@+id/t15min"
+        style="@style/button_text" />
     <Button
-        android:text="30 Min"
+        android:text="30 MIN."
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/t30min" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selection_buttons"
+        android:id="@+id/t30min"
+        style="@style/button_text" />
     <Button
-        android:text="45 Min"
+        android:text="45 MIN."
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/t45min" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selection_buttons"
+        android:id="@+id/t45min"
+        style="@style/button_text" />
 </LinearLayout>

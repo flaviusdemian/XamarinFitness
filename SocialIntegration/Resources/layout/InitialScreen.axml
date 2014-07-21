@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/splash_new">
+    android:background="@drawable/running_girl">
     <Button
         android:id="@+id/LoginButton"
         android:layout_width="fill_parent"

@@ -4,18 +4,27 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <Button
-        android:text="Get Lean"
+        android:text="GET LEAN"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/GetLean" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selection_buttons"
+        android:id="@+id/GetLean"
+        style="@style/button_text" />
     <Button
-        android:text="Get Toned"
+        android:text="GET TONED"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/GetToned" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selection_buttons"
+        android:id="@+id/GetToned"
+        style="@style/button_text" />
     <Button
-        android:text="Impromptu Workout"
+        android:text="IMPROMPTU WORKOUT"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/ImpromptuWorkout" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/selection_buttons"
+        android:id="@+id/ImpromptuWorkout"
+        style="@style/button_text" />
 </LinearLayout>

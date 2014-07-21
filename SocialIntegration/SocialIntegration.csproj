@@ -104,7 +104,6 @@
     <Content Include="Properties\AndroidManifest.xml">
       <SubType>Designer</SubType>
     </Content>
-    <AndroidResource Include="Resources\drawable\splash_new.png" />
     <AndroidResource Include="Resources\drawable\backrepeat.xml" />
     <AndroidResource Include="Resources\drawable\pattern.png" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
@@ -122,6 +121,17 @@
     <AndroidResource Include="Resources\drawable\app_buttons.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\drawable\running_girl.png" />
+    <AndroidResource Include="Resources\drawable\selection_buttons.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <Content Include="Resources\drawable\appButton_background.xml" />
+    <Content Include="Resources\drawable\appButton_layer1.xml" />
+    <Content Include="Resources\drawable\appButton_layer2.xml" />
+    <Content Include="Resources\drawable\selectButton_background.xml" />
+    <Content Include="Resources\drawable\selectButton_layer1.xml" />
+    <Content Include="Resources\drawable\selectButton_layer2.xml" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.social">
@@ -135,6 +145,7 @@
       <Name>SocialIntegrationCore</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.

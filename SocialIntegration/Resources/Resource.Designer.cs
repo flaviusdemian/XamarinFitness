@@ -75,13 +75,16 @@ namespace SocialIntegration
 			public const int pattern = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int splash_button = 2130837514;
+			public const int running_girl = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int splash_new = 2130837515;
+			public const int selection_buttons = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int twitter_button = 2130837516;
+			public const int splash_button = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int twitter_button = 2130837517;
 			
 			static Drawable()
 			{
@@ -140,9 +143,6 @@ namespace SocialIntegration
 			
 			// aapt resource value: 0x7f060012
 			public const int button1 = 2131099666;
-			
-			// aapt resource value: 0x7f060013
-			public const int button2 = 2131099667;
 			
 			// aapt resource value: 0x7f060005
 			public const int t15min = 2131099653;
@@ -243,8 +243,11 @@ namespace SocialIntegration
 		public partial class Style
 		{
 			
+			// aapt resource value: 0x7f050001
+			public const int Mono_Android_Theme_Splash = 2131034113;
+			
 			// aapt resource value: 0x7f050000
-			public const int Mono_Android_Theme_Splash = 2131034112;
+			public const int button_text = 2131034112;
 			
 			static Style()
 			{

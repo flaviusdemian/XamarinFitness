@@ -6,6 +6,6 @@
 	<string name="LoginTwitterButton">Login with twitter</string>
 	<string name="ShareFacebookButton">Share with facebook</string>
 	<string name="ShareTwitterButton">Share with twitter</string>
-  <string name="CreateWorkout">Create Workout</string>
-  <string name="Stats">Stats</string>
+	<string name="CreateWorkout">CREATE WORKOUT</string>
+	<string name="Stats">FAVOURITES</string>
 </resources>
