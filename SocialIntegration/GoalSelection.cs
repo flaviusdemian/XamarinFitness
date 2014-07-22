@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
 
 namespace SocialIntegration
 {
@@ -26,6 +27,11 @@ namespace SocialIntegration
                 Button btn_GetLean = FindViewById<Button>(Resource.Id.GetLean);
                 Button btn_GetToned = FindViewById<Button>(Resource.Id.GetToned);
                 Button btn_ImpromptuWorkout = FindViewById<Button>(Resource.Id.ImpromptuWorkout);
+
+                Typeface font = Typeface.CreateFromAsset(Application.Context.Assets, "RobotoCondensed-Regular.ttf");
+                btn_GetLean.SetTypeface(font, TypefaceStyle.Normal);
+                btn_GetToned.SetTypeface(font, TypefaceStyle.Normal);
+                btn_ImpromptuWorkout.SetTypeface(font, TypefaceStyle.Normal);
 
                 btn_GetLean.Click += delegate
                 {
