@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
 
 namespace SocialIntegration
 {
@@ -25,6 +26,10 @@ namespace SocialIntegration
                 SetContentView(Resource.Layout.EquipmentSelection);
                 Button btn_Equip = FindViewById<Button>(Resource.Id.Equip);
                 Button btn_wEquip = FindViewById<Button>(Resource.Id.wEquip);
+
+                Typeface font = Typeface.CreateFromAsset(Application.Context.Assets, "RobotoCondensed-Regular.ttf");
+                btn_Equip.SetTypeface(font, TypefaceStyle.Normal);
+                btn_wEquip.SetTypeface(font, TypefaceStyle.Normal);
 
                 btn_Equip.Click += delegate
                 {

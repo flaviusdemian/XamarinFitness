@@ -12,7 +12,7 @@ using Android.Graphics;
 
 namespace SocialIntegration
 {
-    [Activity(Label = "SocialIntegration v2", MainLauncher = false, Icon = "@drawable/icon")]
+    [Activity(Label = "SocialIntegration v2", MainLauncher = true, Icon = "@drawable/icon")]
     public class InitialScreen : Activity
     {
         protected override void OnCreate(Bundle bundle)

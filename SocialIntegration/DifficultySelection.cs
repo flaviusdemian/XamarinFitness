@@ -28,6 +28,11 @@ namespace SocialIntegration
                 Button btn_Intermediate = FindViewById<Button>(Resource.Id.Intermediate);
                 Button btn_Advanced = FindViewById<Button>(Resource.Id.Advanced);
 
+                Typeface font = Typeface.CreateFromAsset(Application.Context.Assets, "RobotoCondensed-Regular.ttf");
+                btn_Beginner.SetTypeface(font, TypefaceStyle.Normal);
+                btn_Intermediate.SetTypeface(font, TypefaceStyle.Normal);
+                btn_Advanced.SetTypeface(font, TypefaceStyle.Normal);
+
                 btn_Beginner.Click += delegate
                 {
                     StartActivity(typeof(DurationSelection));

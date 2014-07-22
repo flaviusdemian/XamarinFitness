@@ -13,7 +13,7 @@ using Android.Graphics;
 
 namespace SocialIntegration
 {
-    [Activity(Label = "Dashboard", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Dashboard", MainLauncher = false, Icon = "@drawable/icon")]
     public class Dashboard : Activity
     {
         protected override void OnCreate(Bundle bundle)
