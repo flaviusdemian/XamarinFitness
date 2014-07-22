@@ -68,7 +68,6 @@
     <Compile Include="WorkoutScreen.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\RobotoCondensed-Regular.ttf" />
     <AndroidAsset Include="Assets\Roboto-Medium.ttf" />
     <AndroidAsset Include="Assets\Roboto-Regular.ttf" />
     <AndroidAsset Include="Assets\Roboto-Thin.ttf" />
