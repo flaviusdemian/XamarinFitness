@@ -118,20 +118,16 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\twitter_button.xml" />
-    <AndroidResource Include="Resources\drawable\app_buttons.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\drawable\running_girl.png" />
-    <AndroidResource Include="Resources\drawable\selection_buttons.xml">
+    <AndroidResource Include="Resources\values\Styles.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\values\Styles.xml" />
-    <Content Include="Resources\drawable\appButton_background.xml" />
-    <Content Include="Resources\drawable\appButton_layer1.xml" />
-    <Content Include="Resources\drawable\appButton_layer2.xml" />
-    <Content Include="Resources\drawable\selectButton_background.xml" />
-    <Content Include="Resources\drawable\selectButton_layer1.xml" />
-    <Content Include="Resources\drawable\selectButton_layer2.xml" />
+    <AndroidResource Include="Resources\drawable\appButton_layer1.xml" />
+    <AndroidResource Include="Resources\drawable\appButton_layer2.xml" />
+    <AndroidResource Include="Resources\drawable\appButton_background.xml" />
+    <AndroidResource Include="Resources\drawable\selectButton_layer1.xml" />
+    <AndroidResource Include="Resources\drawable\selectButton_layer2.xml" />
+    <AndroidResource Include="Resources\drawable\selectButton_background.xml" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.social">

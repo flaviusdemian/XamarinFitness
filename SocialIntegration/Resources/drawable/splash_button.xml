@@ -1,13 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+  <!--Style button color for pressed state-->
   <item android:state_pressed="true" >
     <shape>
       <solid android:color="#0097a7"/>
     </shape>
   </item>
+
+
+  <!--Style button color for normal state-->
   <item>
     <shape>
       <solid android:color="#00bcd4"/>
     </shape>
   </item>
+
+
 </selector>

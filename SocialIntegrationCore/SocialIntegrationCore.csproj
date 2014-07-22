@@ -18,7 +18,7 @@
     <AndroidUseLatestPlatformSdk>
     </AndroidUseLatestPlatformSdk>
     <NuGetPackageImportStamp>3fae0c1e</NuGetPackageImportStamp>
-    <TargetFrameworkVersion>v4.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

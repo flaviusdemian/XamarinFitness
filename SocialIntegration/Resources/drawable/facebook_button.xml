@@ -1,5 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-  <item android:state_pressed="true" android:drawable="@drawable/button_facebook_retina_pressed"></item>
-  <item android:drawable="@drawable/button_facebook_retina"></item>
+  
+  
+  <!--Set Facebook image for pressed button state-->
+  <item android:state_pressed="true" 
+        android:drawable="@drawable/button_facebook_retina_pressed">
+  </item>
+
+
+  <!--Set Facebook image for normal button state-->
+  <item android:drawable="@drawable/button_facebook_retina"> 
+  
+  </item>
+
+
 </selector>

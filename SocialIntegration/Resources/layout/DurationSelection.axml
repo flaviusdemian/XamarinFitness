@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@drawable/selection_buttons"
+        android:background="@drawable/selectButton_background"
         android:id="@+id/t15min"
         style="@style/button_text" />
     <Button
@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@drawable/selection_buttons"
+        android:background="@drawable/selectButton_background"
         android:id="@+id/t30min"
         style="@style/button_text" />
     <Button
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@drawable/selection_buttons"
+        android:background="@drawable/selectButton_background"
         android:id="@+id/t45min"
         style="@style/button_text" />
 </LinearLayout>
