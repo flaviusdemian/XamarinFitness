@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
 
 namespace SocialIntegration
 {
@@ -25,6 +26,14 @@ namespace SocialIntegration
                 SetContentView(Resource.Layout.Dashboard);
                 Button btn_CreateWorkout = FindViewById<Button>(Resource.Id.CreateWorkout);
                 Button btn_Stats = FindViewById<Button>(Resource.Id.Stats);
+
+                //Use custom font 
+                Typeface font = Typeface.CreateFromAsset(Application.Context.Assets, "Roboto-Regular.ttf");
+
+                //Change button font
+                btn_CreateWorkout.SetTypeface(font, TypefaceStyle.Normal);
+                btn_Stats.SetTypeface(font, TypefaceStyle.Normal);
+
 
                 btn_CreateWorkout.Click += delegate
                 {

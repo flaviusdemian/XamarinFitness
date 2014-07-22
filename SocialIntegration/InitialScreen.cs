@@ -7,6 +7,7 @@ using Android.Widget;
 using SocialIntegrationCore.Implementation;
 using Xamarin.Social;
 using Android.Views;
+using Android.Graphics;
 
 
 namespace SocialIntegration
@@ -23,6 +24,14 @@ namespace SocialIntegration
 
                 SetContentView(Resource.Layout.InitialScreen);
                 Button LogIn = FindViewById<Button>(Resource.Id.LoginButton);
+
+
+                //Use custom font 
+                Typeface font = Typeface.CreateFromAsset(Application.Context.Assets, "Roboto-Regular.ttf");
+
+                //Change button font
+                LogIn.SetTypeface(font, TypefaceStyle.Normal);
+
 
                 LogIn.Click += delegate
                 {

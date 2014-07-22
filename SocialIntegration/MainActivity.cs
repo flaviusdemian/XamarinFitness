@@ -23,7 +23,7 @@ namespace SocialIntegration
         private const string TwitterConsumerKey = "";
         private const string TwitterConsumerSecret = "";
 
-        private ImageButton btn_LoginWithFacebook, btn_LoginWithtwitter; 
+        private ImageButton btn_LoginWithFacebook, btn_LoginWithtwitter;
         private Button btn_ShareWithFacebook, btn_ShareWithtwitter;
 
         protected override void OnCreate(Bundle bundle)
