@@ -28,7 +28,7 @@ namespace SocialIntegration
                 Button btn_GetToned = FindViewById<Button>(Resource.Id.GetToned);
                 Button btn_ImpromptuWorkout = FindViewById<Button>(Resource.Id.ImpromptuWorkout);
 
-                Typeface font = Typeface.CreateFromAsset(Application.Context.Assets, "RobotoCondensed-Regular.ttf");
+                Typeface font = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "RobotoCondensed-Regular.ttf");
                 btn_GetLean.SetTypeface(font, TypefaceStyle.Normal);
                 btn_GetToned.SetTypeface(font, TypefaceStyle.Normal);
                 btn_ImpromptuWorkout.SetTypeface(font, TypefaceStyle.Normal);

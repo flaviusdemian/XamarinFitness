@@ -28,7 +28,7 @@ namespace SocialIntegration
                 Button btn_Stats = FindViewById<Button>(Resource.Id.Stats);
 
                 //Use custom font 
-                Typeface font = Typeface.CreateFromAsset(Application.Context.Assets, "Roboto-Regular.ttf");
+                Typeface font = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "Roboto-Regular.ttf");
 
                 //Change button font
                 btn_CreateWorkout.SetTypeface(font, TypefaceStyle.Normal);

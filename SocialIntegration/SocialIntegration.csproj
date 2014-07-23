@@ -44,6 +44,9 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
+    <Reference Include="SQLite">
+      <HintPath>..\Components\sqlite-net-1.0.1\lib\android\SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -56,18 +59,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application\MyApplication.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Dashboard.cs" />
     <Compile Include="DifficultySelection.cs" />
     <Compile Include="DurationSelection.cs" />
     <Compile Include="EquipmentSelection.cs" />
     <Compile Include="GoalSelection.cs" />
+    <Compile Include="Helper\SharedPreferencesManager.cs" />
     <Compile Include="InitialScreen.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Models\Difficulty.cs" />
+    <Compile Include="Models\Duration.cs" />
+    <Compile Include="Models\Equipment.cs" />
+    <Compile Include="Models\Exercises.cs" />
+    <Compile Include="Models\Goal.cs" />
+    <Compile Include="Models\Workout.cs" />
+    <Compile Include="Models\WorkoutExerciseAssociations.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkoutScreen.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\RobotoCondensed-Regular.ttf" />
     <AndroidAsset Include="Assets\Roboto-Medium.ttf" />
     <AndroidAsset Include="Assets\Roboto-Regular.ttf" />
     <AndroidAsset Include="Assets\Roboto-Thin.ttf" />
@@ -135,6 +149,10 @@
     <AndroidResource Include="Resources\drawable\background.png" />
   </ItemGroup>
   <ItemGroup>
+    <XamarinComponentReference Include="sqlite-net">
+      <Visible>False</Visible>
+      <Version>1.0.1</Version>
+    </XamarinComponentReference>
     <XamarinComponentReference Include="xamarin.social">
       <Visible>False</Visible>
       <Version>1.1.1</Version>

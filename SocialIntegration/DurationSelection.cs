@@ -28,7 +28,7 @@ namespace SocialIntegration
                 Button btn_t30min = FindViewById<Button>(Resource.Id.t30min);
                 Button btn_t45min = FindViewById<Button>(Resource.Id.t45min);
 
-                Typeface font = Typeface.CreateFromAsset(Application.Context.Assets, "RobotoCondensed-Regular.ttf");
+                Typeface font = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "RobotoCondensed-Regular.ttf");
                 btn_t15min.SetTypeface(font, TypefaceStyle.Normal);
                 btn_t30min.SetTypeface(font, TypefaceStyle.Normal);
                 btn_t45min.SetTypeface(font, TypefaceStyle.Normal);

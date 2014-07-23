@@ -28,7 +28,7 @@ namespace SocialIntegration
 
 
                 //Use custom font 
-                Typeface font = Typeface.CreateFromAsset(Application.Context.Assets, "Roboto-Regular.ttf");
+                Typeface font = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "Roboto-Regular.ttf");
 
                 //Change button font
                 DoWorkout.SetTypeface(font, TypefaceStyle.Normal);
