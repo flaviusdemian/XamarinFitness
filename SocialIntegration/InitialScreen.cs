@@ -13,7 +13,7 @@ using Android.Graphics;
 namespace SocialIntegration
 {
     [Activity(Label = "SocialIntegration v2", MainLauncher = true, Icon = "@drawable/icon")]
-    public class InitialScreen : Activity
+    public class InitialScreenActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -27,7 +27,7 @@ namespace SocialIntegration
 
 
                 //Use custom font 
-                Typeface font = Typeface.CreateFromAsset(Application.Context.Assets, "Roboto-Regular.ttf");
+                Typeface font = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "Roboto-Regular.ttf");
 
                 //Change button font
                 LogIn.SetTypeface(font, TypefaceStyle.Normal);
