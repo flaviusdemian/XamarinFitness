@@ -42,6 +42,9 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ActionBarSherlock">
+      <HintPath>..\Components\XamarinActionBarSherlock-4.4.0.5\lib\android\ActionBarSherlock.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="SQLite">
@@ -51,6 +54,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\Components\XamarinActionBarSherlock-4.4.0.5\lib\android\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Auth.Android">
       <HintPath>..\Components\xamarin.social-1.1.1\lib\android\Xamarin.Auth.Android.dll</HintPath>
     </Reference>
@@ -147,6 +153,41 @@
     <AndroidResource Include="Resources\drawable\selectButton_layer2.xml" />
     <AndroidResource Include="Resources\drawable\selectButton_background.xml" />
     <AndroidResource Include="Resources\drawable\background.png" />
+    <AndroidResource Include="Resources\drawable\abs__ic_go_search_api_holo_light.png" />
+    <AndroidResource Include="Resources\drawable\abs__ic_menu_moreoverflow_normal_holo_light.png" />
+    <AndroidResource Include="Resources\drawable\abs__ic_search_api_holo_light.png" />
+    <AndroidResource Include="Resources\values\Arrays.xml" />
+    <AndroidResource Include="Resources\menu\main_menu.xml" />
+    <AndroidResource Include="Resources\drawable\actionbar_tab_bg.xml" />
+    <AndroidResource Include="Resources\drawable\ad_action_bar_gradient_bak.xml" />
+    <AndroidResource Include="Resources\drawable\ad_btn_check_holo_light.xml" />
+    <AndroidResource Include="Resources\drawable\ad_btn_radio_holo_light.xml" />
+    <AndroidResource Include="Resources\drawable\ad_selectable_background.xml" />
+    <AndroidResource Include="Resources\drawable\ad_spinner_background_holo_light.xml" />
+    <AndroidResource Include="Resources\drawable\rounded_rect.xml" />
+    <AndroidResource Include="Resources\drawable\selected_background.xml" />
+    <AndroidResource Include="Resources\drawable\ad_btn_check_off_pressed_holo_light.png" />
+    <AndroidResource Include="Resources\drawable\ad_btn_check_on_pressed_holo_light.png" />
+    <AndroidResource Include="Resources\drawable\ad_btn_radio_off_pressed_holo_light.png" />
+    <AndroidResource Include="Resources\drawable\ad_btn_radio_on_pressed_holo_light.png" />
+    <AndroidResource Include="Resources\drawable\ad_logo.png" />
+    <AndroidResource Include="Resources\drawable\ad_menu_dropdown_panel_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable\ad_spinner_focused_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable\ad_spinner_pressed_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable\ad_tab_selected_holo.9.png" />
+    <AndroidResource Include="Resources\drawable\ad_tab_selected_pressed_holo.9.png" />
+    <AndroidResource Include="Resources\drawable\ad_tab_unselected_holo.9.png" />
+    <AndroidResource Include="Resources\drawable\btn_check_off_holo_light.png" />
+    <AndroidResource Include="Resources\drawable\btn_check_on_holo_light.png" />
+    <AndroidResource Include="Resources\drawable\btn_radio_off_holo_light.png" />
+    <AndroidResource Include="Resources\drawable\btn_radio_on_holo_light.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_refresh_holo_light.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_star_holo_light.png" />
+    <AndroidResource Include="Resources\drawable\ic_stat_android.png" />
+    <AndroidResource Include="Resources\drawable\spinner_default_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable\spinner_disabled_holo_light.9.png" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="sqlite-net">
@@ -156,6 +197,10 @@
     <XamarinComponentReference Include="xamarin.social">
       <Visible>False</Visible>
       <Version>1.1.1</Version>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="XamarinActionBarSherlock">
+      <Visible>False</Visible>
+      <Version>4.4.0.5</Version>
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
