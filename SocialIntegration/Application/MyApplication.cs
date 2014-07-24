@@ -20,8 +20,10 @@ namespace SocialIntegration.Application
     //, ManageSpaceActivity = typeof(InitialScreenActivity))]
     class MyApplication : Android.App.Application
     {
+        private static String dbName = "db";
         private static String dbPath;
         private static SQLiteAsyncConnection sqLConnection;
+        private string result;
         //private readonly TaskScheduler uiScheduler = TaskScheduler.FromCurrentSynchronizationContext();
 
         public MyApplication(IntPtr javaReference, JniHandleOwnership transfer)
@@ -33,54 +35,37 @@ namespace SocialIntegration.Application
         {
             base.OnCreate();
             InitializeDB();
+            ReadDB();
             // do application specific things here
         }
 
         private async Task InitializeDB()
         {
-            dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), Constants.DB_NAME);
-            sqLConnection = new SQLiteAsyncConnection(dbPath, true);
+            dbPath = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.ToString(), dbName);
 
-
-            var prefs = Android.App.Application.Context.GetSharedPreferences(Constants.APP_NAME, FileCreationMode.Private);
-            var dbIsInitialized = prefs.GetBoolean(Constants.DB_INIT_KEY, false);
-            //get key value for dbinit 
-            if (dbIsInitialized == false)
+            if (!File.Exists(dbPath))
             {
-                //insert the db for the first time
-                try
+                using (BinaryReader br = new BinaryReader(Assets.Open(dbName)))
                 {
-                    await PopulateDB();
-                    //var prefEditor = prefs.Edit();
-                    //prefEditor.PutBoolean(Constants.DB_INIT_KEY, true);
-                    //prefEditor.Commit();
-                }
-                catch (Exception ex)
-                {
-                    string msg = ex.ToString();
+                    using (BinaryWriter bw = new BinaryWriter(new FileStream(dbPath, FileMode.Create)))
+                    {
+                        byte[] buffer = new byte[2048];
+                        int len = 0;
+                        while ((len = br.Read(buffer, 0, buffer.Length)) > 0)
+                        {
+                            bw.Write(buffer, 0, len);
+                        }
+                    }
                 }
             }
+            sqLConnection = new SQLiteAsyncConnection(dbPath, true);
         }
 
-        private async Task PopulateDB()
+        private async Task ReadDB()
         {
             try
             {
-                CreateTablesResult result = await sqLConnection.CreateTableAsync<Difficulty>();
-                result = await sqLConnection.CreateTableAsync<Duration>();
-                //Duration duration = new Duration() { ID = 1, Value = 15 };
-                //int count = await sqLConnection.InsertAsync(duration);
-
-                //Duration duration2 = new Duration() { ID = 2, Value = 45 };
-                //count = await sqLConnection.InsertAsync(duration2);
-
-                var list = await sqLConnection.Table<Duration>().ToListAsync();
-                
-                result = await sqLConnection.CreateTableAsync<Equipment>();
-                result = await sqLConnection.CreateTableAsync<Exercises>();
-                result = await sqLConnection.CreateTableAsync<Goal>();
-                result = await sqLConnection.CreateTableAsync<Workout>();
-                result = await sqLConnection.CreateTableAsync<WorkoutExerciseAssociations>();
+                var result = await sqLConnection.Table<Exercises>().ToListAsync();
                 int x = 0;
             }
             catch (Exception ex)
