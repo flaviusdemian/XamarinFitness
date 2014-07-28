@@ -22,7 +22,7 @@ namespace SocialIntegration.Application
     {
         private static String dbName = "db";
         private static String dbPath;
-        private static SQLiteAsyncConnection sqLConnection;
+        public static SQLiteAsyncConnection sqLConnection { get; private set; }
         private string result;
         //private readonly TaskScheduler uiScheduler = TaskScheduler.FromCurrentSynchronizationContext();
 

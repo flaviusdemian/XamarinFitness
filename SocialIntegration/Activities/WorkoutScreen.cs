@@ -10,6 +10,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics;
+using SocialIntegration.Application;
+using SocialIntegration.Models;
+using System.Threading.Tasks;
 
 namespace SocialIntegration
 {
@@ -33,12 +36,43 @@ namespace SocialIntegration
                 //Change button font
                 DoWorkout.SetTypeface(font, TypefaceStyle.Normal);
 
+                LoadExercises();
 
             }
             catch (Exception ex)
             {
                 ex.ToString();
                 throw;
+            }
+        }
+
+        private async Task LoadExercises()
+        {
+            try
+            {
+                var associations = await MyApplication.sqLConnection.Table<WorkoutExerciseAssociations>().ToListAsync();
+                //associations = associations.Where(assoc => assoc.WorkoutID == 1).ToList();
+                if (associations != null)
+                {
+                    List<Exercises> exercises = new List<Exercises>();
+                    foreach (var association in associations)
+                    {
+                        var returnedExercises = await MyApplication.sqLConnection.Table<Exercises>().Where(ex => ex.ID == association.ExerciseID).ToListAsync();
+                        foreach(var ex in returnedExercises)
+                        {
+                            if (exercises.Contains(ex) == false)
+                            {
+                                exercises.Add(ex);
+                            }
+                        }
+                    }
+                }
+                int x = 0;
+                x++;
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
             }
         }
     }
