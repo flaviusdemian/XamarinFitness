@@ -14,14 +14,18 @@ using Android.Graphics;
 using Xamarin.ActionbarSherlockBinding.App;
 using Xamarin.ActionbarSherlockBinding.Views;
 using Xamarin.ActionbarSherlockBinding.Widget;
+using SlidingMenu;
+using SocialIntegration.Fragments;
+using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 
 
 
 namespace SocialIntegration
 {
     [Activity(Label = "Dashboard", MainLauncher = true, Icon = "@drawable/icon")]
-    public class Dashboard : SherlockFragmentActivity
+    public class Dashboard : SlidingMenuParentActivity
     {
+        public static FragmentSample fragmentSample = new FragmentSample();
         private static Handler handler = new Handler();
         private bool useLogo = false;
         private bool showHomeUp = false;
@@ -32,36 +36,18 @@ namespace SocialIntegration
             {
                 base.OnCreate(bundle);
                 //RequestWindowFeature(WindowFeatures.NoTitle);
-                SetContentView(Resource.Layout.Dashboard);
                 var ab = base.SupportActionBar;
-                
+
                 //set defaults for logo & home up
                 ab.SetDisplayHomeAsUpEnabled(showHomeUp);
                 ab.SetDisplayUseLogoEnabled(useLogo);
 
                 ////set up list nav
                 ab.SetListNavigationCallbacks(ArrayAdapter.CreateFromResource(this, Resource.Array.sections, Resource.Drawable.abs__ic_menu_moreoverflow_normal_holo_light), null);
-
-                Button btn_CreateWorkout = FindViewById<Button>(Resource.Id.CreateWorkout);
-                Button btn_Stats = FindViewById<Button>(Resource.Id.Stats);
-
-                //Use custom font 
-                Typeface font = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "Roboto-Regular.ttf");
-
-                //Change button font
-                btn_CreateWorkout.SetTypeface(font, TypefaceStyle.Normal);
-                btn_Stats.SetTypeface(font, TypefaceStyle.Normal);
-
-
-                btn_CreateWorkout.Click += delegate
-                {
-                    StartActivity(typeof(GoalSelection));
-                };
             }
-             catch (Exception ex)
+            catch (Exception ex)
             {
                 ex.ToString();
-                throw;
             }
         }
 
@@ -77,10 +63,25 @@ namespace SocialIntegration
             catch (Exception ex)
             {
                 ex.ToString();
-                throw;
             }
             return base.OnCreateOptionsMenu(menu);
         }
-
+        protected override void SelectItem()
+        {
+            try
+            {
+                FragmentTransaction ft = SupportFragmentManager.BeginTransaction();
+                ft.Replace(Resource.Id.content_frame, fragmentSample);
+                ft.Commit();
+                mDrawerListLeft.SetItemChecked(0, true);
+                // Close drawer
+                mDrawerLayout.CloseDrawer(mDrawerListLeft);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+        }
     }
+
 }

@@ -26,3 +26,17 @@ D:\Proiecte\Android Application\Xamarin_Fitness_App\XamarinFitness\SocialIntegra
 D:\Proiecte\Android Application\Xamarin_Fitness_App\XamarinFitness\SocialIntegrationCore\obj\Debug\android\bin\SocialIntegrationCore.SocialIntegrationCore.apk
 D:\Proiecte\Android Application\Xamarin_Fitness_App\XamarinFitness\SocialIntegrationCore\obj\Debug\R.cs.flag
 D:\Proiecte\Android Application\Xamarin_Fitness_App\XamarinFitness\SocialIntegrationCore\obj\Debug\uploadflags.txt
+C:\Users\Robert\Desktop\xamarin test\XamarinFitness\SocialIntegrationCore\bin\Debug\SocialIntegrationCore.dll
+C:\Users\Robert\Desktop\xamarin test\XamarinFitness\SocialIntegrationCore\bin\Debug\SocialIntegrationCore.pdb
+C:\Users\Robert\Desktop\xamarin test\XamarinFitness\SocialIntegrationCore\bin\Debug\SocialIntegrationCore.dll.mdb
+C:\Users\Robert\Desktop\xamarin test\XamarinFitness\SocialIntegrationCore\bin\Debug\SocialIntegrationCore.SocialIntegrationCore.apk
+C:\Users\Robert\Desktop\xamarin test\XamarinFitness\SocialIntegrationCore\bin\Debug\SocialIntegrationCore.SocialIntegrationCore-Signed.apk
+C:\Users\Robert\Desktop\xamarin test\XamarinFitness\SocialIntegrationCore\bin\Debug\Xamarin.Auth.Android.dll
+C:\Users\Robert\Desktop\xamarin test\XamarinFitness\SocialIntegrationCore\bin\Debug\Xamarin.Social.Android.dll
+C:\Users\Robert\Desktop\xamarin test\XamarinFitness\SocialIntegrationCore\bin\Debug\Xamarin.Auth.Android.xml
+C:\Users\Robert\Desktop\xamarin test\XamarinFitness\SocialIntegrationCore\bin\Debug\Xamarin.Social.Android.xml
+C:\Users\Robert\Desktop\xamarin test\XamarinFitness\SocialIntegrationCore\obj\Debug\SocialIntegrationCore.dll
+C:\Users\Robert\Desktop\xamarin test\XamarinFitness\SocialIntegrationCore\obj\Debug\SocialIntegrationCore.pdb
+C:\Users\Robert\Desktop\xamarin test\XamarinFitness\SocialIntegrationCore\obj\Debug\android\bin\SocialIntegrationCore.SocialIntegrationCore.apk
+C:\Users\Robert\Desktop\xamarin test\XamarinFitness\SocialIntegrationCore\obj\Debug\R.cs.flag
+C:\Users\Robert\Desktop\xamarin test\XamarinFitness\SocialIntegrationCore\obj\Debug\uploadflags.txt

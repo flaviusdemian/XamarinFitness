@@ -7,11 +7,9 @@
 	<string name="ShareFacebookButton">Share with facebook</string>
 	<string name="ShareTwitterButton">Share with twitter</string>
 	<string name="CreateWorkout">CREATE WORKOUT</string>
-	<string name="Stats">FAVOURITES</string>
-  
+	<string name="Stats">FAVOURITES</string> 
   <string name="application_name">ActionBarSherlock Styled</string>
   <string name="activity_name">ABS: Styled</string>
-
   <string name="action_label_refresh">Refresh</string>
   <string name="action_label_search">Search</string>
   <string name="action_label_both">Both</string>
@@ -28,4 +26,24 @@
   <string name="action_label_bak_gradient">Gradient</string>
   <string name="action_label_bak_image">Image</string>
   <string name="action_label_options">Options</string>
+  <string name="Hello">Hello World, Click Me!</string>
+  <string name="ApplicationName">SlidingMenu</string>
+  <string name="drawer_open">Open navigation drawer</string>
+  <string name="drawer_close">Close navigation drawer</string>
+  <string name="IMAGE_CONTENT_DESCRIPTION_DECORATIVE">“This is just a decorative image”</string>
+  <string name="SETTINGS_PROFILE">PROFILE</string>
+  <string name="SETTINGS_EDIT_PROFILE">Edit profile</string>
+  <string name="SETTINGS_VIDEO_CALL">Video call</string>
+  <string name="SETTINGS_FRIENDS">Friends</string>
+  <string name="SETTINGS_COMMUNITY">Community</string>
+  <string name="SETTINGS_HELP">HELP</string>
+  <string name="SETTINGS_HOW_TO_USE">How to use</string>
+  <string name="SETTINGS_RATE_THIS_APP">Rate this app</string>
+  <string name="SETTINGS_DONATE">Donate</string>
+  <string name="SETTINGS_ABOUT">About</string>
+  <string name="SETTINGS_SETTINGS">SETTINGS</string>
+  <string name="SETTINGS_ACCOUNT_SETTINGS">Account settings</string>
+  <string name="SETTINGS_TERMS_AND_CONDITIONS">Terms and conditions</string>
+  <string name="SETTINGS_REPORT_A_PROBLEM">Report a problem</string>
+  <string name="SETTINGS_LOGOUT">Log out</string>
 </resources>
