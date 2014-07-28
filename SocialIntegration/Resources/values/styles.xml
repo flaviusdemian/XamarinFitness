@@ -13,4 +13,14 @@
     <item name="android:shadowDy" >1</item>
     <item name="android:shadowRadius" >2</item>-->
   </style>
+
+  <style name="Theme.MyTheme" parent="Theme.Sherlock.Light">
+    <item name="actionBarStyle">@style/Widget.MyTheme.ActionBar</item>
+    <item name="android:actionBarStyle">@style/Widget.MyTheme.ActionBar</item>    
+  </style>
+
+  <style name="Widget.MyTheme.ActionBar" parent="Widget.Sherlock.ActionBar">
+    <item name="android:background">#00bcd4</item>
+    <item name="background">#00bcd4</item>
+  </style>
 </resources>

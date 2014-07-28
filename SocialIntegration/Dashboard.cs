@@ -20,7 +20,7 @@ using Xamarin.ActionbarSherlockBinding.Widget;
 namespace SocialIntegration
 {
     [Activity(Label = "Dashboard", MainLauncher = true, Icon = "@drawable/icon")]
-    public class Dashboard : SherlockActivity
+    public class Dashboard : SherlockFragmentActivity
     {
         private static Handler handler = new Handler();
         private bool useLogo = false;
@@ -30,7 +30,6 @@ namespace SocialIntegration
         {
             try
             {
-                SetTheme(Resource.Style.Theme_Sherlock_Light);
                 base.OnCreate(bundle);
                 //RequestWindowFeature(WindowFeatures.NoTitle);
                 SetContentView(Resource.Layout.Dashboard);
@@ -41,7 +40,7 @@ namespace SocialIntegration
                 ab.SetDisplayUseLogoEnabled(useLogo);
 
                 ////set up list nav
-                ab.SetListNavigationCallbacks(ArrayAdapter.CreateFromResource(this, Resource.Array.sections, Resource.Drawable.abs__ic_menu_moreoverflow_normal_holo_dark), null);
+                ab.SetListNavigationCallbacks(ArrayAdapter.CreateFromResource(this, Resource.Array.sections, Resource.Drawable.abs__ic_menu_moreoverflow_normal_holo_light), null);
 
                 Button btn_CreateWorkout = FindViewById<Button>(Resource.Id.CreateWorkout);
                 Button btn_Stats = FindViewById<Button>(Resource.Id.Stats);
@@ -82,5 +81,6 @@ namespace SocialIntegration
             }
             return base.OnCreateOptionsMenu(menu);
         }
+
     }
 }

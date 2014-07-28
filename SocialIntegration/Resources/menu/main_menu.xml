@@ -49,9 +49,11 @@
 				<item android:id="@+id/menu_nav_drop_down" android:title="@string/action_label_nav_drop_down" />
 
 				<item android:id="@+id/menu_nav_label" android:title="@string/action_label_nav_label" />
+      
 			</group>
 		</menu>
 	</item>
+  
 
 	<!-- action bar background submenu -->
 	<item android:id="@+id/menu_bak" android:title="@string/action_label_bak">
@@ -67,5 +69,8 @@
 			</group>
 		</menu>
 	</item>
+  
+  <item android:id="@+id/menu_text" android:showAsAction="ifRoom"
+        android:title="@string/action_label_options" />
 
 </menu>
