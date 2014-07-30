@@ -73,8 +73,13 @@
     <Compile Include="Activities\DifficultySelection.cs" />
     <Compile Include="Activities\DurationSelection.cs" />
     <Compile Include="Activities\EquipmentSelection.cs" />
-    <Compile Include="Fragments\FragmentSample.cs" />
+    <Compile Include="Fragments\FragmentDifficultySelection.cs" />
+    <Compile Include="Fragments\FragmentDurationSelection.cs" />
+    <Compile Include="Fragments\FragmentEquipmentSelection.cs" />
+    <Compile Include="Fragments\FragmentGoalSelection.cs" />
+    <Compile Include="Fragments\FragmentDashboard.cs" />
     <Compile Include="Activities\GoalSelection.cs" />
+    <Compile Include="Fragments\FragmentWorkoutScreen.cs" />
     <Compile Include="Helper\MenuHelper.cs" />
     <Compile Include="Helper\SharedPreferencesManager.cs" />
     <Compile Include="Activities\InitialScreen.cs" />
@@ -201,7 +206,9 @@
     <AndroidResource Include="Resources\drawable\ic_stat_android.png" />
     <AndroidResource Include="Resources\drawable\spinner_default_holo_light.9.png" />
     <AndroidResource Include="Resources\drawable\spinner_disabled_holo_light.9.png" />
-    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\colors.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\values\dimens.xml" />
     <AndroidResource Include="Resources\drawable\linkedtranslators_user.png" />
     <AndroidResource Include="Resources\drawable\linkedtranslators_reportaproblemicon.png" />
@@ -218,6 +225,8 @@
     <AndroidResource Include="Resources\drawable\linkedtranslators_logouticon.png" />
     <AndroidResource Include="Resources\drawable\linkedtranslators_paypalicon.png" />
     <AndroidResource Include="Resources\drawable\linkedtranslators_ratethisappicon.png" />
+    <AndroidResource Include="Resources\drawable\button_burger_retina.png" />
+    <AndroidResource Include="Resources\drawable\button_burger.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="sqlite-net">

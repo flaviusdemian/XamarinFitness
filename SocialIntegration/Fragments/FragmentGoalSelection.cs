@@ -14,7 +14,7 @@ using Android.Graphics;
 
 namespace SocialIntegration.Fragments
 {
-    public class FragmentSample : SherlockFragment
+    public class FragmentGoalSelection : SherlockFragment
     {
         private ListView lv_searchResults, mySignLanguagelist, mySpokenLanguagelist;
         private View rootView;
@@ -29,7 +29,7 @@ namespace SocialIntegration.Fragments
             rootView = null;
             try
             {
-                rootView = inflater.Inflate(Resource.Layout.Dashboard, container, false);
+                rootView = inflater.Inflate(Resource.Layout.GoalSelection, container, false);
                 InitializeUIElements();
             }
             catch (Exception ex)
@@ -43,26 +43,24 @@ namespace SocialIntegration.Fragments
         {
             try
             {
-                Button btn_CreateWorkout = rootView.FindViewById<Button>(Resource.Id.CreateWorkout);
-                Button btn_Stats = rootView.FindViewById<Button>(Resource.Id.Stats);
+                Button btn_GetLean = rootView.FindViewById<Button>(Resource.Id.GetLean);
+                Button btn_GetToned = rootView.FindViewById<Button>(Resource.Id.GetToned);
+                Button btn_ImpromptuWorkout = rootView.FindViewById<Button>(Resource.Id.ImpromptuWorkout);
 
-                //Use custom font 
-                Typeface font = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "Roboto-Regular.ttf");
+                Typeface font = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "RobotoCondensed-Regular.ttf");
+                btn_GetLean.SetTypeface(font, TypefaceStyle.Normal);
+                btn_GetToned.SetTypeface(font, TypefaceStyle.Normal);
+                btn_ImpromptuWorkout.SetTypeface(font, TypefaceStyle.Normal);
 
-                //Change button font
-                btn_CreateWorkout.SetTypeface(font, TypefaceStyle.Normal);
-                btn_Stats.SetTypeface(font, TypefaceStyle.Normal);
-
-
-                btn_CreateWorkout.Click += delegate
+                btn_GetLean.Click += delegate
                 {
-                    SherlockActivity.StartActivity(typeof(GoalSelection));
+                    SherlockActivity.StartActivity(typeof(DifficultySelection));
                 };
             }
             catch (Exception ex)
             {
                 ex.ToString();
             }
-            }
         }
     }
+}

@@ -11,37 +11,64 @@ using Android.Views;
 using Android.Widget;
 using Android.Graphics;
 
+using Xamarin.ActionbarSherlockBinding.App;
+using Xamarin.ActionbarSherlockBinding.Views;
+using Xamarin.ActionbarSherlockBinding.Widget;
+using SlidingMenu;
+using SocialIntegration.Fragments;
+using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
+
 namespace SocialIntegration
 {
-    [Activity(Label = "Goal Selection", MainLauncher = false, Icon = "@drawable/icon")]
-    public class GoalSelection : Activity
+    [Activity(Label = "Goal Selection", MainLauncher = false, Icon = "@drawable/button_burger_retina")]
+    public class GoalSelection : SlidingMenuParentActivity
     {
+        public static FragmentGoalSelection fragmentSample = new FragmentGoalSelection();
+        private static Handler handler = new Handler();
+        private bool useLogo = false;
+        private bool showHomeUp = false;
         protected override void OnCreate(Bundle bundle)
         {
             try
             {
                 base.OnCreate(bundle);
-                RequestWindowFeature(WindowFeatures.NoTitle);
-
-                SetContentView(Resource.Layout.GoalSelection);
-                Button btn_GetLean = FindViewById<Button>(Resource.Id.GetLean);
-                Button btn_GetToned = FindViewById<Button>(Resource.Id.GetToned);
-                Button btn_ImpromptuWorkout = FindViewById<Button>(Resource.Id.ImpromptuWorkout);
-
-                Typeface font = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "RobotoCondensed-Regular.ttf");
-                btn_GetLean.SetTypeface(font, TypefaceStyle.Normal);
-                btn_GetToned.SetTypeface(font, TypefaceStyle.Normal);
-                btn_ImpromptuWorkout.SetTypeface(font, TypefaceStyle.Normal);
-
-                btn_GetLean.Click += delegate
-                {
-                    StartActivity(typeof(DifficultySelection));
-                };
             }
             catch (Exception ex)
             {
                 ex.ToString();
                 throw;
+            }
+        }
+
+        public override bool OnCreateOptionsMenu(Xamarin.ActionbarSherlockBinding.Views.IMenu menu)
+        {
+            try
+            {
+                //MenuInflater.Inflate(Resource.Menu.myMenu, menu);
+                //SupportMenuInflater.Inflate(Resource.Menu.main_menu, menu);
+                SupportMenuInflater.Inflate(Resource.Menu.main_menu, menu);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        protected override void SelectItem()
+        {
+            try
+            {
+                FragmentTransaction ft = SupportFragmentManager.BeginTransaction();
+                ft.Replace(Resource.Id.content_frame, fragmentSample);
+                ft.Commit();
+                mDrawerListLeft.SetItemChecked(0, true);
+                // Close drawer
+                mDrawerLayout.CloseDrawer(mDrawerListLeft);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
             }
         }
     }

@@ -18,7 +18,7 @@
   <!--Layer 1-->
   <item>
     <shape>
-      <solid android:color="#c8c8c9"/>
+      <solid android:color="#c1c1c2"/>
       <padding android:top="1dp" 
                android:right="0dp" 
                android:bottom="1dp" 
@@ -29,7 +29,7 @@
   <!--Layer 2-->
   <item>
     <shape>
-      <solid android:color="#d2d2d3"/>
+      <solid android:color="#c8c8c9"/>
       <padding android:top="1dp" 
                android:right="0dp" 
                android:bottom="1dp" 
@@ -40,7 +40,7 @@
   <!--Layer 3-->
   <item>
     <shape>
-      <solid android:color="#dbdbdc"/>
+      <solid android:color="#cdcdce"/>
       <padding android:top="1dp" 
                android:right="0dp" 
                android:bottom="1dp" 
@@ -51,7 +51,7 @@
   <!--Layer 4-->
   <item>
     <shape>
-      <solid android:color="#e2e2e3"/>
+      <solid android:color="#d2d2d3"/>
       <padding android:top="1dp" 
                android:right="0dp" 
                android:bottom="1dp" 
@@ -62,7 +62,7 @@
   <!--Layer 5-->
   <item>
     <shape>
-      <solid android:color="#e7e7e8"/>
+      <solid android:color="#d7d7d8"/>
       <padding android:top="1dp" 
                android:right="0dp" 
                android:bottom="1dp" 
@@ -73,7 +73,7 @@
   <!--Layer 6-->
   <item>
     <shape>
-      <solid android:color="#ebebec"/>
+      <solid android:color="#dbdbdc"/>
       <padding android:top="1dp" 
                android:right="0dp" 
                android:bottom="1dp" 
@@ -81,13 +81,79 @@
     </shape>
   </item>
 
-  <!--Layer 7 (lightest color)-->
+  <!--Layer 7-->
   <item>
     <shape>
-      <solid android:color="#ededee"/>
+      <solid android:color="#dfdfe0"/>
       <padding android:top="1dp" 
                android:right="0dp" 
                android:bottom="1dp" 
+               android:left="0dp" />
+    </shape>
+  </item>
+
+  <!--Layer 8-->
+  <item>
+    <shape>
+      <solid android:color="#e2e2e3"/>
+      <padding android:top="1dp"
+               android:right="0dp"
+               android:bottom="1dp"
+               android:left="0dp" />
+    </shape>
+  </item>
+
+  <!--Layer 9-->
+  <item>
+    <shape>
+      <solid android:color="#e5e5e6"/>
+      <padding android:top="1dp"
+               android:right="0dp"
+               android:bottom="1dp"
+               android:left="0dp" />
+    </shape>
+  </item>
+
+  <!--Layer 10-->
+  <item>
+    <shape>
+      <solid android:color="#e7e7e8"/>
+      <padding android:top="1dp"
+               android:right="0dp"
+               android:bottom="1dp"
+               android:left="0dp" />
+    </shape>
+  </item>
+
+  <!--Layer 11-->
+  <item>
+    <shape>
+      <solid android:color="#eaeaeb"/>
+      <padding android:top="1dp"
+               android:right="0dp"
+               android:bottom="1dp"
+               android:left="0dp" />
+    </shape>
+  </item>
+
+  <!--Layer 12-->
+  <item>
+    <shape>
+      <solid android:color="#ebebec"/>
+      <padding android:top="1dp"
+               android:right="0dp"
+               android:bottom="1dp"
+               android:left="0dp" />
+    </shape>
+  </item>
+
+  <!--Layer 13 (lightest color)-->
+  <item>
+    <shape>
+      <solid android:color="#ededee"/>
+      <padding android:top="1dp"
+               android:right="0dp"
+               android:bottom="1dp"
                android:left="0dp" />
     </shape>
   </item>

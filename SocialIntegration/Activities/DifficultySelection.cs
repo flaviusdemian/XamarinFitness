@@ -11,37 +11,64 @@ using Android.Views;
 using Android.Widget;
 using Android.Graphics;
 
+using Xamarin.ActionbarSherlockBinding.App;
+using Xamarin.ActionbarSherlockBinding.Views;
+using Xamarin.ActionbarSherlockBinding.Widget;
+using SlidingMenu;
+using SocialIntegration.Fragments;
+using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
+
 namespace SocialIntegration
 {
     [Activity(Label = "Difficulty Selection", MainLauncher = false, Icon = "@drawable/icon")]
-    public class DifficultySelection : Activity
+    public class DifficultySelection : SlidingMenuParentActivity
     {
+        public static FragmentDifficultySelection fragmentSample = new FragmentDifficultySelection();
+        private static Handler handler = new Handler();
+        private bool useLogo = false;
+        private bool showHomeUp = false;
         protected override void OnCreate(Bundle bundle)
         {
             try
             {
                 base.OnCreate(bundle);
-                RequestWindowFeature(WindowFeatures.NoTitle);
-
-                SetContentView(Resource.Layout.DifficultySelection);
-                Button btn_Beginner = FindViewById<Button>(Resource.Id.Beginner);
-                Button btn_Intermediate = FindViewById<Button>(Resource.Id.Intermediate);
-                Button btn_Advanced = FindViewById<Button>(Resource.Id.Advanced);
-
-                Typeface font = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "RobotoCondensed-Regular.ttf");
-                btn_Beginner.SetTypeface(font, TypefaceStyle.Normal);
-                btn_Intermediate.SetTypeface(font, TypefaceStyle.Normal);
-                btn_Advanced.SetTypeface(font, TypefaceStyle.Normal);
-
-                btn_Beginner.Click += delegate
-                {
-                    StartActivity(typeof(DurationSelection));
-                };
             }
             catch (Exception ex)
             {
                 ex.ToString();
                 throw;
+            }
+        }
+
+        public override bool OnCreateOptionsMenu(Xamarin.ActionbarSherlockBinding.Views.IMenu menu)
+        {
+            try
+            {
+                //MenuInflater.Inflate(Resource.Menu.myMenu, menu);
+                //SupportMenuInflater.Inflate(Resource.Menu.main_menu, menu);
+                SupportMenuInflater.Inflate(Resource.Menu.main_menu, menu);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        protected override void SelectItem()
+        {
+            try
+            {
+                FragmentTransaction ft = SupportFragmentManager.BeginTransaction();
+                ft.Replace(Resource.Id.content_frame, fragmentSample);
+                ft.Commit();
+                mDrawerListLeft.SetItemChecked(0, true);
+                // Close drawer
+                mDrawerLayout.CloseDrawer(mDrawerListLeft);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
             }
         }
     }

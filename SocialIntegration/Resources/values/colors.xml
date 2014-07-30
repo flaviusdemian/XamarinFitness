@@ -200,4 +200,6 @@
   <color name="black">#000000</color>
   <color name="gray">#f7f7f7</color>
   <color name="gray2">#e7e7e7</color>
+  <color name="darkCyan">#0097a7</color>
+  <color name="cyanA700">#00b8d4</color>
 </resources>

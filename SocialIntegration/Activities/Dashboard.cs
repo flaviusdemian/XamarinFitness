@@ -25,7 +25,7 @@ namespace SocialIntegration
     [Activity(Label = "Dashboard", MainLauncher = true, Icon = "@drawable/icon")]
     public class Dashboard : SlidingMenuParentActivity
     {
-        public static FragmentSample fragmentSample = new FragmentSample();
+        public static FragmentDashboard fragmentSample = new FragmentDashboard();
         private static Handler handler = new Handler();
         private bool useLogo = false;
         private bool showHomeUp = false;
@@ -35,7 +35,6 @@ namespace SocialIntegration
             try
             {
                 base.OnCreate(bundle);
-                //RequestWindowFeature(WindowFeatures.NoTitle);
                 var ab = base.SupportActionBar;
 
                 //set defaults for logo & home up

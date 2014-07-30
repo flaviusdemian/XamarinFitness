@@ -14,30 +14,28 @@ using SocialIntegration.Application;
 using SocialIntegration.Models;
 using System.Threading.Tasks;
 
+using Xamarin.ActionbarSherlockBinding.App;
+using Xamarin.ActionbarSherlockBinding.Views;
+using Xamarin.ActionbarSherlockBinding.Widget;
+using SlidingMenu;
+using SocialIntegration.Fragments;
+using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
+
 namespace SocialIntegration
 {
     [Activity(Label = "Workout Screen", MainLauncher = false, Icon = "@drawable/icon")]
-    public class WorkoutScreen : Activity
+    public class WorkoutScreen : SlidingMenuParentActivity
     {
-        protected override void OnCreate(Bundle bundle)
+        public static FragmentWorkoutScreen fragmentSample = new FragmentWorkoutScreen();
+        private static Handler handler = new Handler();
+        private bool useLogo = false;
+        private bool showHomeUp = false;
+        protected async override void OnCreate(Bundle bundle)
         {
             try
             {
                 base.OnCreate(bundle);
-                RequestWindowFeature(WindowFeatures.NoTitle);
-
-                SetContentView(Resource.Layout.WorkoutScreen);
-                Button DoWorkout = FindViewById<Button>(Resource.Id.button1);
-
-
-                //Use custom font 
-                Typeface font = Typeface.CreateFromAsset(Android.App.Application.Context.Assets, "Roboto-Regular.ttf");
-
-                //Change button font
-                DoWorkout.SetTypeface(font, TypefaceStyle.Normal);
-
-                LoadExercises();
-
+                var exercises  = await LoadExercises();
             }
             catch (Exception ex)
             {
@@ -46,15 +44,48 @@ namespace SocialIntegration
             }
         }
 
-        private async Task LoadExercises()
+        public override bool OnCreateOptionsMenu(Xamarin.ActionbarSherlockBinding.Views.IMenu menu)
         {
+            try
+            {
+                //MenuInflater.Inflate(Resource.Menu.myMenu, menu);
+                //SupportMenuInflater.Inflate(Resource.Menu.main_menu, menu);
+                SupportMenuInflater.Inflate(Resource.Menu.main_menu, menu);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        protected override void SelectItem()
+        {
+            try
+            {
+                FragmentTransaction ft = SupportFragmentManager.BeginTransaction();
+                ft.Replace(Resource.Id.content_frame, fragmentSample);
+                ft.Commit();
+                mDrawerListLeft.SetItemChecked(0, true);
+                // Close drawer
+                mDrawerLayout.CloseDrawer(mDrawerListLeft);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+        }
+
+        private async Task<List<Exercises>> LoadExercises()
+        {
+            List<Exercises> exercises = null;
             try
             {
                 var associations = await MyApplication.sqLConnection.Table<WorkoutExerciseAssociations>().ToListAsync();
                 //associations = associations.Where(assoc => assoc.WorkoutID == 1).ToList();
                 if (associations != null)
                 {
-                    List<Exercises> exercises = new List<Exercises>();
+                    exercises = new List<Exercises>();
                     foreach (var association in associations)
                     {
                         var returnedExercises = await MyApplication.sqLConnection.Table<Exercises>().Where(ex => ex.ID == association.ExerciseID).ToListAsync();
@@ -74,6 +105,7 @@ namespace SocialIntegration
             {
                 ex.ToString();
             }
+            return exercises;
         }
     }
 }
