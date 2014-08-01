@@ -14,4 +14,11 @@
         android:id="@+id/button1"
         android:background="@drawable/appButton_background"
         android:layout_alignParentBottom="true" />
+    <ListView
+        android:id="@+id/lv_exercise_layout"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/button1" />
 </RelativeLayout>

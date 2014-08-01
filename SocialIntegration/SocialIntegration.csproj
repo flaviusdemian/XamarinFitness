@@ -48,7 +48,7 @@
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="SQLite">
-      <HintPath>..\Components\sqlite-net-1.0.1\lib\android\SQLite.dll</HintPath>
+      <HintPath>..\Components\sqlite-net-1.0.8\lib\android\SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\SlidingMenuParentActivity.cs" />
+    <Compile Include="Adapters\ExercisesAdapter.cs" />
     <Compile Include="Adapters\SettingsAdapter.cs" />
     <Compile Include="Application\MyApplication.cs" />
     <Compile Include="Activities\Constants.cs" />
@@ -76,10 +77,10 @@
     <Compile Include="Fragments\FragmentDifficultySelection.cs" />
     <Compile Include="Fragments\FragmentDurationSelection.cs" />
     <Compile Include="Fragments\FragmentEquipmentSelection.cs" />
+    <Compile Include="Fragments\FragmentExerciseWorkout.cs" />
     <Compile Include="Fragments\FragmentGoalSelection.cs" />
     <Compile Include="Fragments\FragmentDashboard.cs" />
     <Compile Include="Activities\GoalSelection.cs" />
-    <Compile Include="Fragments\FragmentWorkoutScreen.cs" />
     <Compile Include="Helper\MenuHelper.cs" />
     <Compile Include="Helper\SharedPreferencesManager.cs" />
     <Compile Include="Activities\InitialScreen.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Activities\WorkoutScreen.cs" />
+    <Compile Include="ViewHolder\ExercisesViewHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\RobotoCondensed-Regular.ttf" />
@@ -127,14 +129,15 @@
     <AndroidResource Include="Resources\layout\WorkoutScreen.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\activity_slidingmenu_filter_result.axml" />
-    <AndroidResource Include="Resources\layout\activity_slidingmenu_filter_results_row.axml" />
     <AndroidResource Include="Resources\layout\activity_expandable_listview_header.axml" />
     <AndroidResource Include="Resources\layout\activity_settings.axml" />
     <AndroidResource Include="Resources\layout\activity_settings_section_item.axml" />
     <AndroidResource Include="Resources\layout\activity_settings_section_view.axml" />
     <AndroidResource Include="Resources\layout\activity_slidingmenu.axml" />
     <AndroidResource Include="Resources\drawable\activity_settings_list_selector_background.axml" />
+    <AndroidResource Include="Resources\layout\Exercise_layout_row.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -211,27 +214,31 @@
     </AndroidResource>
     <AndroidResource Include="Resources\values\dimens.xml" />
     <AndroidResource Include="Resources\drawable\linkedtranslators_user.png" />
-    <AndroidResource Include="Resources\drawable\linkedtranslators_reportaproblemicon.png" />
-    <AndroidResource Include="Resources\drawable\linkedtranslators_settingsicon.png" />
-    <AndroidResource Include="Resources\drawable\linkedtranslators_termsandconditionsicon.png" />
-    <AndroidResource Include="Resources\drawable\linkedtranslators_videocallicon.png" />
-    <AndroidResource Include="Resources\drawable\blue_bar.png" />
     <AndroidResource Include="Resources\drawable\drawer_shadow.9.png" />
     <AndroidResource Include="Resources\drawable\ic_drawer.png" />
-    <AndroidResource Include="Resources\drawable\linkedtranslators_abouticon.png" />
-    <AndroidResource Include="Resources\drawable\linkedtranslators_communityicon.png" />
-    <AndroidResource Include="Resources\drawable\linkedtranslators_friendsicon.png" />
-    <AndroidResource Include="Resources\drawable\linkedtranslators_helpicon.png" />
-    <AndroidResource Include="Resources\drawable\linkedtranslators_logouticon.png" />
     <AndroidResource Include="Resources\drawable\linkedtranslators_paypalicon.png" />
-    <AndroidResource Include="Resources\drawable\linkedtranslators_ratethisappicon.png" />
     <AndroidResource Include="Resources\drawable\button_burger_retina.png" />
     <AndroidResource Include="Resources\drawable\button_burger.png" />
+    <AndroidResource Include="Resources\drawable\linkedtranslators_abouticon.png" />
+    <AndroidResource Include="Resources\drawable\linkedtranslators_helpicon.png" />
+    <AndroidResource Include="Resources\drawable\linkedtranslators_ratethisappicon.png" />
+    <AndroidResource Include="Resources\drawable\linkedtranslators_settingsicon.png" />
+    <AndroidResource Include="Resources\drawable\linkedtranslators_communityicon.png" />
+    <AndroidResource Include="Resources\drawable\linkedtranslators_friendsicon.png" />
+    <AndroidResource Include="Resources\drawable\linkedtranslators_logouticon.png" />
+    <AndroidResource Include="Resources\drawable\linkedtranslators_reportaproblemicon.png" />
+    <AndroidResource Include="Resources\drawable\linkedtranslators_termsandconditionsicon.png" />
+    <AndroidResource Include="Resources\drawable\linkedtranslators_videocallicon.png" />
+    <AndroidResource Include="Resources\drawable\stopwatch_retina.png" />
+    <AndroidResource Include="Resources\drawable\blue_bar.png" />
+    <AndroidResource Include="Resources\drawable\stars_ratingbar.xml" />
+    <AndroidResource Include="Resources\drawable\star_full.png" />
+    <AndroidResource Include="Resources\drawable\star_hollow.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="sqlite-net">
       <Visible>False</Visible>
-      <Version>1.0.1</Version>
+      <Version>1.0.8</Version>
     </XamarinComponentReference>
     <XamarinComponentReference Include="xamarin.social">
       <Visible>False</Visible>

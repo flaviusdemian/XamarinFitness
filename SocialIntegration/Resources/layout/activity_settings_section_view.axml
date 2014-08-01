@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/darkGray">
+    android:background="#191919">
     <TextView
         android:id="@+id/settings_section_title"
         style="?android:attr/listSeparatorTextViewStyle"
@@ -13,6 +13,6 @@
         android:textSize="18sp"
         android:paddingTop="7dp"
         android:paddingBottom="7dp"
-        android:background="@color/darkGray"
-        android:textColor="@color/yellow" />
+        android:background="#191919"
+        android:textColor="#808080" />
 </LinearLayout>

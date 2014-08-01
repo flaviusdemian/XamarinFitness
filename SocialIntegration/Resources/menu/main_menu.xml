@@ -39,7 +39,7 @@
 		android:checkable="true" android:checked="false" android:title="@string/action_label_up" />
 
 	<!-- Navigation submenu -->
-	<item android:id="@+id/menu_nav" android:title="@string/action_label_nav">
+	<item android:id="@+id/menu_nav" android:title="@string/action_label_nav" >
 		<menu>
 			<group android:id="@+id/menu_nav_group"
 				android:checkableBehavior="single">

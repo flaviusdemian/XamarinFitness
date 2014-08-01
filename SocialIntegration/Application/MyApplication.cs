@@ -35,7 +35,7 @@ namespace SocialIntegration.Application
         {
             base.OnCreate();
             InitializeDB();
-            ReadDB();
+            //ReadDB();
             // do application specific things here
         }
 

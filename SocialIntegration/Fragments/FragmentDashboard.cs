@@ -63,6 +63,6 @@ namespace SocialIntegration.Fragments
             {
                 ex.ToString();
             }
-            }
         }
     }
+}

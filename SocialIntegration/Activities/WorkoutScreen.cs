@@ -26,16 +26,23 @@ namespace SocialIntegration
     [Activity(Label = "Workout Screen", MainLauncher = false, Icon = "@drawable/icon")]
     public class WorkoutScreen : SlidingMenuParentActivity
     {
-        public static FragmentWorkoutScreen fragmentSample = new FragmentWorkoutScreen();
+        public static FragmentExerciseWorkout fragmentSample = new FragmentExerciseWorkout();
         private static Handler handler = new Handler();
         private bool useLogo = false;
         private bool showHomeUp = false;
-        protected async override void OnCreate(Bundle bundle)
+        protected override void OnCreate(Bundle bundle)
         {
             try
             {
                 base.OnCreate(bundle);
-                var exercises  = await LoadExercises();
+                var ab = base.SupportActionBar;
+
+                //set defaults for logo & home up
+                ab.SetDisplayHomeAsUpEnabled(showHomeUp);
+                ab.SetDisplayUseLogoEnabled(useLogo);
+
+                ////set up list nav
+                ab.SetListNavigationCallbacks(ArrayAdapter.CreateFromResource(this, Resource.Array.sections, Resource.Drawable.abs__ic_menu_moreoverflow_normal_holo_light), null);
             }
             catch (Exception ex)
             {

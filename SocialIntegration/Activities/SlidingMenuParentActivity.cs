@@ -37,7 +37,6 @@ namespace SlidingMenu
             base.OnCreate(bundle);
             try
             {
-
                 SetContentView(Resource.Layout.activity_slidingmenu);
                 InitializeUIElements();
                 if (bundle == null)
@@ -47,7 +46,6 @@ namespace SlidingMenu
             }
             catch (Exception ex)
             {
-                //NotificationService.showWarningCrouton("Failed at onCreate");
                 ex.ToString();
             }
         }
@@ -102,29 +100,6 @@ namespace SlidingMenu
                         {
                             tv_location.Text = "Timisoara, Romanaia";
                         }
-
-                        //ImageView iv_profilePicture = (ImageView) expandableHeaderReference.findViewById(R.id.current_customer_image);
-                        //if( iv_profilePicture != null)
-                        //{
-                        //    imageLoader.displayImage(currentUser.getPicture(), iv_profilePicture, ImageLoaderManager.getImageLoaderOptions(),new ImageLoadingListener() {
-                        //        @Override
-                        //        public void onLoadingCancelled(String arg0, View arg1) {
-                        //        }
-
-                        //        @Override
-                        //        public void onLoadingComplete(String arg0, View arg1, Bitmap arg2) {
-                        //        }
-
-                        //        @Override
-                        //        public void onLoadingFailed(String arg0, View arg1, FailReason arg2) {
-                        //        }
-
-                        //        @Override
-                        //        public void onLoadingStarted(String arg0, View arg1) {
-                        //        }
-                        //    });
-                        //}
-
                         expandableHeaderReference.Click += delegate(object sender, EventArgs args)
                         {
                             int x = 0;
@@ -145,12 +120,6 @@ namespace SlidingMenu
                 {
                     int x = 0;
                 };
-
-
-                //mDrawerListLeft.GroupClick += (sender, args) =>
-                //{
-                //    return true;
-                //};
 
                 mDrawerListLeft.SetOnChildClickListener(this);
 
@@ -175,20 +144,6 @@ namespace SlidingMenu
                     Resource.String.drawer_close /* "close drawer" description for accessibility */
                     );
 
-                //mDrawerToggle.OnDrawerClosed(View view)
-                //{
-                //    ActionBar.Title = mTitle;
-                //    InvalidateOptionsMenu();
-                //};
-
-                //mDrawerToggle.OnDrawerOpened(View drawverView)
-                //{
-                //    ActionBar.Title = mDrawerTitle;
-                //    InvalidateOptionsMenu();
-                //}
-                             
-                // This would disable the home button from being the menu toggle and revert it to normal "back" behavior
-                // mDrawerToggle.setDrawerIndicatorEnabled(false); 
                 mDrawerLayout.SetDrawerListener(mDrawerToggle);
 
                 sliderInitialized = true;

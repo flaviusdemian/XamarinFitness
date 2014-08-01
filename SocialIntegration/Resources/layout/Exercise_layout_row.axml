@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#fafafa">
+    <ImageView
+        android:id="@+id/iv_activity_exercise_layout_row_picture"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:background="#DDDDDD" />
+    <TextView
+        android:id="@+id/tv_activity_exercise_layout_row_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="7dp"
+        android:layout_toRightOf="@+id/iv_activity_exercise_layout_row_picture"
+        android:maxLines="1"
+        android:text="EXERCISE"
+        android:textColor="#3f3f3f"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tv_activity_exercise_layout_row_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:paddingTop="2dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/tv_activity_exercise_layout_row_name"
+        android:layout_toRightOf="@+id/iv_activity_exercise_layout_row_picture"
+        android:maxLines="1"
+        android:text="DIFFICULTY"
+        android:textColor="#ececec"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:background="#3f3f3f" />
+    <RatingBar
+        android:id="@+id/rb_activity_exercise_layout_row_ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="14dip"
+        android:focusable="false"
+        style="@style/CustomRatingBar"
+        android:numStars="5" />
+    <ImageView
+        android:id="@+id/iv_activity_exercise_layout_row_stopwatch"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/iv_activity_exercise_layout_row_picture"
+        android:layout_below="@+id/tv_activity_exercise_layout_row_difficulty"
+        android:src="@drawable/stopwatch_retina" />
+    <TextView
+        android:id="@+id/tv_activity_exercise_layout_row_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_activity_exercise_layout_row_difficulty"
+        android:layout_toRightOf="@+id/iv_activity_exercise_layout_row_stopwatch"
+        android:text="Duration"
+        android:textColor="#1e79d3"
+        android:textSize="10dp" />
+</RelativeLayout>

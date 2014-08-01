@@ -37,7 +37,7 @@ namespace SocialIntegration
             // and attach an event to it
             btn_LoginWithFacebook = FindViewById<ImageButton>(Resource.Id.LoginFacebookButton);
             //btn_LoginWithFacebook.Click += (sender, args) => LoginWithFacebook();
-            btn_LoginWithFacebook.Click += (sender, args) =>  StartActivity(typeof(Dashboard));
+            btn_LoginWithFacebook.Click += (sender, args) => StartActivity(typeof(Dashboard));
 
             btn_LoginWithtwitter = FindViewById<ImageButton>(Resource.Id.LoginTwitterButton);
             btn_LoginWithtwitter.Click += (sender, args) => LoginWithTwitter();
