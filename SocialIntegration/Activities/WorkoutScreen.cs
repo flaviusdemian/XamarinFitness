@@ -82,37 +82,5 @@ namespace SocialIntegration
                 ex.ToString();
             }
         }
-
-        private async Task<List<Exercises>> LoadExercises()
-        {
-            List<Exercises> exercises = null;
-            try
-            {
-                var associations = await MyApplication.sqLConnection.Table<WorkoutExerciseAssociations>().ToListAsync();
-                //associations = associations.Where(assoc => assoc.WorkoutID == 1).ToList();
-                if (associations != null)
-                {
-                    exercises = new List<Exercises>();
-                    foreach (var association in associations)
-                    {
-                        var returnedExercises = await MyApplication.sqLConnection.Table<Exercises>().Where(ex => ex.ID == association.ExerciseID).ToListAsync();
-                        foreach(var ex in returnedExercises)
-                        {
-                            if (exercises.Contains(ex) == false)
-                            {
-                                exercises.Add(ex);
-                            }
-                        }
-                    }
-                }
-                int x = 0;
-                x++;
-            }
-            catch (Exception ex)
-            {
-                ex.ToString();
-            }
-            return exercises;
-        }
     }
 }

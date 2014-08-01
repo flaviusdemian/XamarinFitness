@@ -13,6 +13,8 @@ using Android.Widget;
 using Xamarin.ActionbarSherlockBinding.App;
 using SocialIntegration.Adapters;
 using SocialIntegration.Models;
+using SocialIntegration.Application;
+using System.Threading.Tasks;
 
 namespace SocialIntegration.Fragments
 {
@@ -36,16 +38,12 @@ namespace SocialIntegration.Fragments
             return rootView;
         }
 
-        private void initializeUIElements()
+        private async Task initializeUIElements()
         {
             try
             {
-                Exercises ex = new Exercises();
-                Exercises ex1 = new Exercises();
-                List<Exercises> items = new List<Exercises>();
-                items.Add(ex1);
-                items.Add(ex);
-                ExercisesAdapter adapter = new ExercisesAdapter(SherlockActivity, Resource.Layout.Exercise_layout_row, items);
+                var exercises = await LoadExercises();
+                ExerciseAdapter adapter = new ExerciseAdapter(SherlockActivity, Resource.Layout.Exercise_layout_row, exercises);
                 lv_searchResults = rootView.FindViewById<ListView>(Resource.Id.lv_exercise_layout);
                 if (adapter != null && lv_searchResults != null)
                 {
@@ -56,6 +54,38 @@ namespace SocialIntegration.Fragments
             {
                 ex.ToString();
             }
+        }
+
+        private async Task<List<Exercise>> LoadExercises()
+        {
+            List<Exercise> exercises = null;
+            try
+            {
+                var associations = await MyApplication.sqLConnection.Table<WorkoutExerciseAssociations>().ToListAsync();
+                //associations = associations.Where(assoc => assoc.WorkoutID == 1).ToList();
+                if (associations != null)
+                {
+                    exercises = new List<Exercise>();
+                    foreach (var association in associations)
+                    {
+                        var returnedExercises = await MyApplication.sqLConnection.Table<Exercise>().Where(ex => ex.ID == association.ExerciseID).ToListAsync();
+                        foreach (var ex in returnedExercises)
+                        {
+                            if (exercises.Contains(ex) == false)
+                            {
+                                exercises.Add(ex);
+                            }
+                        }
+                    }
+                }
+                int x = 0;
+                x++;
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+            return exercises;
         }
     }
 }

@@ -12,12 +12,12 @@ using Android.Widget;
 
 namespace SocialIntegration.ViewHolder
 {
-    public class ExercisesViewHolder : Java.Lang.Object
+    public class ExerciseViewHolder : Java.Lang.Object
     {
-        public ImageView IvPicture { get; set; }
         public TextView TvName { get; set; }
         public TextView TvDifficulty { get; set; }
-        public TextView TvDuration { get; set; }
         public RatingBar RbRating { get; set; }
+        public TextView TvDuration { get; set; }
+        public ImageView IvPicture { get; set; }
     }
 }

@@ -12,10 +12,13 @@ using Android.Widget;
 
 namespace SocialIntegration.Models
 {
-    public class Exercises
+    public class Exercise
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
+        public string Difficulty { get; set; }
+        public float Rating { get; set; }
+        public string Duration { get; set; }   
+        public string Picture { get; set; }        
     }
 }

@@ -33,18 +33,26 @@ namespace SocialIntegration.Application
 
         public override void OnCreate()
         {
-            base.OnCreate();
-            InitializeDB();
-            //ReadDB();
-            // do application specific things here
+            try
+            {
+                base.OnCreate();
+                InitializeDB();
+                // do application specific things here
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
         }
 
         private async Task InitializeDB()
         {
-            dbPath = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.ToString(), dbName);
-
-            if (!File.Exists(dbPath))
+            try
             {
+                dbPath = Path.Combine(Android.OS.Environment.ExternalStorageDirectory.ToString(), dbName);
+
+                //if (!File.Exists(dbPath))
+                //{
                 using (BinaryReader br = new BinaryReader(Assets.Open(dbName)))
                 {
                     using (BinaryWriter bw = new BinaryWriter(new FileStream(dbPath, FileMode.Create)))
@@ -57,16 +65,9 @@ namespace SocialIntegration.Application
                         }
                     }
                 }
-            }
-            sqLConnection = new SQLiteAsyncConnection(dbPath, true);
-        }
-
-        private async Task ReadDB()
-        {
-            try
-            {
-                var result = await sqLConnection.Table<Exercises>().ToListAsync();
-                int x = 0;
+                //}
+                sqLConnection = new SQLiteAsyncConnection(dbPath, true);
+                await ReadDB();
             }
             catch (Exception ex)
             {
@@ -74,17 +75,17 @@ namespace SocialIntegration.Application
             }
         }
 
-        //public async Task ReadWords()
-        //{
-        //    //try
-        //    //{
-        //    //    List<Word> words = await sqLConnection.Table<Word>().ToListAsync();
-        //    //    int x = 0;
-        //    //}
-        //    //catch (System.Exception ex)
-        //    //{
-        //    //    ex.ToString();
-        //    //}
-        //}
+        private async Task ReadDB()
+        {
+            try
+            {
+                var result = await sqLConnection.Table<Exercise>().ToListAsync();
+                int x = 0;
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+        }
     }
 }

@@ -11,18 +11,19 @@ using Android.Views;
 using Android.Widget;
 using SocialIntegration.Models;
 using SocialIntegration.ViewHolder;
+using Android.Graphics.Drawables;
 
 namespace SocialIntegration.Adapters
 {
-    public class ExercisesAdapter : ArrayAdapter<Exercises>
+    public class ExerciseAdapter : ArrayAdapter<Exercise>
     {
         private Context context;
-        private List<Exercises> dataSource, oldDataSource;
-        private Exercises currentItem;
+        private List<Exercise> dataSource, oldDataSource;
+        private Exercise currentItem;
         private int row;
 
 
-        public ExercisesAdapter(Context context, int resource, List<Exercises> arrayList)
+        public ExerciseAdapter(Context context, int resource, List<Exercise> arrayList)
             : base(context, resource, arrayList)
         {
             this.context = context;
@@ -30,16 +31,16 @@ namespace SocialIntegration.Adapters
             this.dataSource = this.oldDataSource = arrayList;
         }
 
-        public List<Exercises> getDataSource()
+        public List<Exercise> getDataSource()
         {
             return dataSource;
         }
-        public void setDataSource(List<Exercises> dataSource)
+        public void setDataSource(List<Exercise> dataSource)
         {
             this.dataSource = dataSource;
         }
 
-        public void updateDataSource(List<Exercises> dataSource)
+        public void updateDataSource(List<Exercise> dataSource)
         {
             this.dataSource = this.oldDataSource = dataSource;
         }
@@ -48,18 +49,18 @@ namespace SocialIntegration.Adapters
         {
 
             View view = convertView;
-            ExercisesViewHolder holder;
+            ExerciseViewHolder holder;
             if (view == null)
             {
                 LayoutInflater inflater = (LayoutInflater)context.GetSystemService(Context.LayoutInflaterService);
                 view = inflater.Inflate(row, null);
 
-                holder = new ExercisesViewHolder();
+                holder = new ExerciseViewHolder();
                 view.Tag = holder;
             }
             else
             {
-                holder = (ExercisesViewHolder)view.Tag;
+                holder = (ExerciseViewHolder)view.Tag;
             }
             try
             {
@@ -78,22 +79,26 @@ namespace SocialIntegration.Adapters
 
                     if (holder.RbRating != null)
                     {
-                        holder.RbRating.Rating = 3;
+                        holder.RbRating.Rating = currentItem.Rating;
                     }
 
                     if (holder.TvName != null)
                     {
-                        holder.TvName.Text = "WARM UP";
+                        holder.TvName.Text = currentItem.Name;
                     }
 
                     if (holder.TvDifficulty != null)
                     {
-                        holder.TvDifficulty.Text = "MODERATE";
+                        holder.TvDifficulty.Text = currentItem.Difficulty;
                     }
 
                     if (holder.TvDuration != null)
                     {
-                        holder.TvDuration.Text = "10 Min.";
+                        holder.TvDuration.Text = currentItem.Duration;
+                    }
+                    if (holder.IvPicture != null)
+                    {
+                        holder.IvPicture.SetImageResource(GetImageIdFromName(currentItem.Picture));
                     }
                 }
             }
@@ -109,6 +114,19 @@ namespace SocialIntegration.Adapters
             {
                 return dataSource.Count;
             }
+        }
+        private int GetImageIdFromName(string imageName)
+        {
+            try
+            {
+                int id = context.Resources.GetIdentifier(String.Format("{0}:{1}/{2}", context.PackageName, "drawable", imageName), null, null);
+                return id;
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+            return 0;
         }
 
     }
