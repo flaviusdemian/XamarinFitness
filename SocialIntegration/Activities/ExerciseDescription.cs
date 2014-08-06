@@ -17,12 +17,13 @@ using System.Threading.Tasks;
 namespace SocialIntegration.Activities
 {
     [Activity(Label = "Exercise Description", MainLauncher = false, Icon = "@drawable/icon")]
-    public class ExerciseDescription : Activity
+    public class ExerciseDescription : Activity, GestureDetector.IOnGestureListener
     {
         ViewFlipper viewFlipper;
         Button buttonPrev, buttonNext;
         ImageView view1, view2, view3;
         private Exercise currentExercise = null;
+        private GestureDetector _gestureDetector;
         protected override void OnCreate(Bundle bundle)
         {
             try
@@ -94,12 +95,64 @@ namespace SocialIntegration.Activities
                     var tv_stepDescription = view.FindViewById<TextView>(Resource.Id.tv_activity_exerciseDescription_text);
                     tv_stepDescription.Text = entry.Description;
                 }
-
+                SetUpGesture();
             }
             catch (Exception ex)
             {
                 ex.ToString();
             }
+        }
+
+        private void SetUpGesture()
+        {
+            try
+            {
+                _gestureDetector = new GestureDetector(this);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+        }
+
+        public bool OnFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY)
+        {
+            float sensitvity = 50;
+            if ((e1.RawX - e2.RawX) > sensitvity)
+            {
+                viewFlipper.ShowNext();
+            }
+            else if ((e2.RawX - e1.RawX) > sensitvity)
+            {
+                viewFlipper.ShowPrevious();
+            }
+            return true;
+        }
+
+        public bool OnDown(MotionEvent e)
+        {
+            return false;
+        }
+        public void OnShowPress(MotionEvent e)
+        {
+        }
+        public bool OnSingleTapUp(MotionEvent e)
+        {
+            return false;
+        }
+
+        public void OnLongPress(MotionEvent e)
+        {
+        }
+        public bool OnScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY)
+        {
+            return false;
+        }
+
+        public override bool OnTouchEvent(MotionEvent e)
+        {
+            _gestureDetector.OnTouchEvent(e);
+            return false;
         }
 
         private async Task<Exercise> GetSelectedExercise(int selectedExeriseId)
