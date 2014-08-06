@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="14dp"
+    android:paddingRight="14dp"
+    android:paddingBottom="14dp"
+    android:paddingLeft="14dp"
+    android:background="@drawable/background">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:id="@+id/tv_activity_exerciseDescription_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BURPEES"
+            android:textColor="#3f3f3f"
+            android:textSize="20dp" />
+        <ImageView
+            android:id="@+id/iv_activity_exerciseDescription_video"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/video_icon" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_activity_exerciseDescription_description"
+        android:minHeight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:text="Stand tall. Drop to a squat with your hands on the ground outside of your feet. Then jump your feet back, putting yourself into a planq.Jump your feet forward to a squat and leap up or stand up. Repeat. Add a pushup if you want!"
+        android:textColor="#3f3f3f"
+        android:textSize="14dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="14dp">
+        <Button
+            android:id="@+id/btn_activity_exerciseDescription_prev"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="previous" />
+        <Button
+            android:id="@+id/btn_activity_exerciseDescription_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="next" />
+    </LinearLayout>
+    <ViewFlipper
+        android:id="@+id/vf_activity_exerciseDescription_viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

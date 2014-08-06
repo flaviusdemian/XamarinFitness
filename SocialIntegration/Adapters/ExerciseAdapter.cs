@@ -12,6 +12,7 @@ using Android.Widget;
 using SocialIntegration.Models;
 using SocialIntegration.ViewHolder;
 using Android.Graphics.Drawables;
+using SocialIntegration.Application;
 
 namespace SocialIntegration.Adapters
 {
@@ -98,7 +99,7 @@ namespace SocialIntegration.Adapters
                     }
                     if (holder.IvPicture != null)
                     {
-                        holder.IvPicture.SetImageResource(GetImageIdFromName(currentItem.Picture));
+                        holder.IvPicture.SetImageResource(MyApplication.GetImageIdFromName(currentItem.Picture, context));
                     }
                 }
             }
@@ -115,19 +116,5 @@ namespace SocialIntegration.Adapters
                 return dataSource.Count;
             }
         }
-        private int GetImageIdFromName(string imageName)
-        {
-            try
-            {
-                int id = context.Resources.GetIdentifier(String.Format("{0}:{1}/{2}", context.PackageName, "drawable", imageName), null, null);
-                return id;
-            }
-            catch (Exception ex)
-            {
-                ex.ToString();
-            }
-            return 0;
-        }
-
     }
 }

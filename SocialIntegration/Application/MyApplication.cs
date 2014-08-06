@@ -18,7 +18,7 @@ namespace SocialIntegration.Application
 {
     [Application(Debuggable = true)]
     //, ManageSpaceActivity = typeof(InitialScreenActivity))]
-    class MyApplication : Android.App.Application
+    public class MyApplication : Android.App.Application
     {
         private static String dbName = "db";
         private static String dbPath;
@@ -86,6 +86,21 @@ namespace SocialIntegration.Application
             {
                 ex.ToString();
             }
+        }
+
+
+        public static int GetImageIdFromName(string imageName, Context context)
+        {
+            try
+            {
+                int id = context.Resources.GetIdentifier(String.Format("{0}:{1}/{2}", context.PackageName, "drawable", imageName), null, null);
+                return id;
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+            return 0;
         }
     }
 }

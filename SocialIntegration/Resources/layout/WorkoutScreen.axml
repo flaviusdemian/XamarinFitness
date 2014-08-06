@@ -11,7 +11,7 @@
         android:textColor="#777f20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1"
+        android:id="@+id/btn_workout"
         android:background="@drawable/appButton_background"
         android:layout_alignParentBottom="true" />
     <ListView
@@ -20,5 +20,5 @@
         android:minHeight="25px"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:layout_above="@id/button1" />
+        android:layout_above="@id/btn_workout" />
 </RelativeLayout>

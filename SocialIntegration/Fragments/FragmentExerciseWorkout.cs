@@ -15,6 +15,7 @@ using SocialIntegration.Adapters;
 using SocialIntegration.Models;
 using SocialIntegration.Application;
 using System.Threading.Tasks;
+using SocialIntegration.Activities;
 
 namespace SocialIntegration.Fragments
 {
@@ -47,13 +48,30 @@ namespace SocialIntegration.Fragments
                 lv_searchResults = rootView.FindViewById<ListView>(Resource.Id.lv_exercise_layout);
                 if (adapter != null && lv_searchResults != null)
                 {
+                    lv_searchResults.ItemClick += lv_searchResults_ItemClick;
                     lv_searchResults.Adapter = adapter;
                 }
+
+                Button btn = rootView.FindViewById<Button>(Resource.Id.btn_workout);
+                btn.Click += (sender, args) =>
+                {
+                    //var destinationActivity = new Intent(SherlockActivity, typeof(ExerciseDescription));
+                    //destinationActivity.PutExtra("selectedExerise", "");
+                    //SherlockActivity.StartActivity(destinationActivity);
+                };
             }
             catch (Exception ex)
             {
                 ex.ToString();
             }
+        }
+
+        void lv_searchResults_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            var destinationActivity = new Intent(SherlockActivity, typeof(ExerciseDescription));
+            destinationActivity.PutExtra("selectedExerise", e.Position);
+            SherlockActivity.StartActivity(destinationActivity);
+
         }
 
         private async Task<List<Exercise>> LoadExercises()

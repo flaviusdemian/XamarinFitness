@@ -22,7 +22,7 @@ using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 
 namespace SocialIntegration
 {
-    [Activity(Label = "Dashboard", MainLauncher = false, Icon = "@drawable/icon")]
+    [Activity(Label = "Dashboard", MainLauncher = true, Icon = "@drawable/icon")]
     public class Dashboard : SlidingMenuParentActivity
     {
         public static FragmentDashboard fragmentSample = new FragmentDashboard();

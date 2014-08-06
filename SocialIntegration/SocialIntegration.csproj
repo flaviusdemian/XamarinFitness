@@ -65,7 +65,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\ExerciseDescription.cs" />
     <Compile Include="Activities\SlidingMenuParentActivity.cs" />
+    <Compile Include="Activities\TimerActivity.cs" />
     <Compile Include="Adapters\ExerciseAdapter.cs" />
     <Compile Include="Adapters\SettingsAdapter.cs" />
     <Compile Include="Application\MyApplication.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Models\Duration.cs" />
     <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\Exercise.cs" />
+    <Compile Include="Models\ExerciseStep.cs" />
     <Compile Include="Models\Goal.cs" />
     <Compile Include="Models\Section.cs" />
     <Compile Include="Models\SectionItem.cs" />
@@ -136,6 +139,15 @@
     <AndroidResource Include="Resources\layout\activity_slidingmenu.axml" />
     <AndroidResource Include="Resources\drawable\activity_settings_list_selector_background.axml" />
     <AndroidResource Include="Resources\layout\Exercise_layout_row.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Timer_layout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ExerciseDescription_layout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\flip_viewer_template.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -235,6 +247,27 @@
     <AndroidResource Include="Resources\drawable\star_full.png" />
     <AndroidResource Include="Resources\drawable\star_hollow.png" />
     <AndroidResource Include="Resources\drawable\light_jog.png" />
+    <AndroidResource Include="Resources\drawable\burpees.png" />
+    <AndroidResource Include="Resources\drawable\cool_down.png" />
+    <AndroidResource Include="Resources\drawable\push_ups.png" />
+    <AndroidResource Include="Resources\drawable\squats.png" />
+    <AndroidResource Include="Resources\drawable\hip_lifts.png" />
+    <AndroidResource Include="Resources\drawable\plank.png" />
+    <AndroidResource Include="Resources\drawable\back_pedal.png" />
+    <AndroidResource Include="Resources\drawable\timerButton1_background.xml" />
+    <AndroidResource Include="Resources\drawable\timerButton1_layer1.xml" />
+    <AndroidResource Include="Resources\drawable\timerButton2_layer1.xml" />
+    <AndroidResource Include="Resources\drawable\timerButton1_layer2.xml" />
+    <AndroidResource Include="Resources\drawable\timerButton2_layer2.xml" />
+    <AndroidResource Include="Resources\drawable\timerButton2_background.xml" />
+    <AndroidResource Include="Resources\drawable\video_icon.png" />
+    <AndroidResource Include="Resources\drawable\slide_in_left.xml" />
+    <AndroidResource Include="Resources\drawable\slide_in_right.xml" />
+    <AndroidResource Include="Resources\drawable\slide_out_left.xml" />
+    <AndroidResource Include="Resources\drawable\slide_out_right.xml" />
+    <AndroidResource Include="Resources\drawable\burpees_1.jpg" />
+    <AndroidResource Include="Resources\drawable\burpees_2.jpg" />
+    <AndroidResource Include="Resources\drawable\burpees_3.jpg" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="sqlite-net">

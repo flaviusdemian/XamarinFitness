@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:background="@drawable/background">
+<!--<ListView
+        android:id="@+id/lv_timer"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_timer" />-->
+    <TextView
+        android:id="@+id/tv_timer_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="10dip"
+        android:textSize="50dp"
+        android:text="00:30" />
+    <LinearLayout
+        android:id="@+id/ll_timer"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#777f20"
+            android:text="END WORKOUT"
+            android:background="@drawable/timerButton1_background" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#777f20"
+            android:text="PAUSE"
+            android:background="@drawable/timerButton2_background" />
+    </LinearLayout>
+</RelativeLayout>

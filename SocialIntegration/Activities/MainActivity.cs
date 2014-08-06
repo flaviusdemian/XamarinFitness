@@ -10,7 +10,7 @@ using Android.Views;
 
 namespace SocialIntegration
 {
-    [Activity(Label = "SocialIntegration2", MainLauncher = false, Icon = "@drawable/icon")]
+    [Activity(Label = "Main Activity", MainLauncher = false, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         //private ISocialMediaProvider SocialMediaProvider = null;
@@ -36,8 +36,8 @@ namespace SocialIntegration
             // Get our button from the layout resource,
             // and attach an event to it
             btn_LoginWithFacebook = FindViewById<ImageButton>(Resource.Id.LoginFacebookButton);
-            //btn_LoginWithFacebook.Click += (sender, args) => LoginWithFacebook();
-            btn_LoginWithFacebook.Click += (sender, args) => StartActivity(typeof(Dashboard));
+            btn_LoginWithFacebook.Click += (sender, args) => LoginWithFacebook();
+            //btn_LoginWithFacebook.Click += (sender, args) => StartActivity(typeof(Dashboard));
 
             btn_LoginWithtwitter = FindViewById<ImageButton>(Resource.Id.LoginTwitterButton);
             btn_LoginWithtwitter.Click += (sender, args) => LoginWithTwitter();
