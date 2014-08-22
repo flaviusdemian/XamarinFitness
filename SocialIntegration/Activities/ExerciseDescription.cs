@@ -21,7 +21,6 @@ namespace SocialIntegration.Activities
     {
         ViewFlipper viewFlipper;
         Button buttonPrev, buttonNext;
-        ImageView view1, view2, view3;
         private Exercise currentExercise = null;
         private GestureDetector _gestureDetector;
         protected override void OnCreate(Bundle bundle)
@@ -32,9 +31,7 @@ namespace SocialIntegration.Activities
                 RequestWindowFeature(WindowFeatures.NoTitle);
                 SetContentView(Resource.Layout.ExerciseDescription_layout);
 
-
-
-                initializeUIElements(Intent.GetIntExtra("selectedExerise", -1));
+                initializeUIElements(Intent.GetIntExtra(Constants.SelectedExercise, -1));
             }
             catch (Exception ex)
             {
@@ -42,7 +39,7 @@ namespace SocialIntegration.Activities
             }
         }
 
-        private async Task initializeUIElements(int selectedExerise)
+        private async Task initializeUIElements(int selectedExercise)
         {
             try
             {
@@ -52,38 +49,37 @@ namespace SocialIntegration.Activities
 
                 buttonPrev.Click += delegate
                 {
-                    viewFlipper.SetInAnimation(this, Android.Resource.Animation.SlideInLeft);
-                    viewFlipper.SetOutAnimation(this, Android.Resource.Animation.SlideOutRight);
-                    //viewFlipper.DisplayedChild = viewFlipper.IndexOfChild(view2);
+                    viewFlipper.SetInAnimation(this, Resource.Animation.slide_in_left);
+                    viewFlipper.SetOutAnimation(this, Resource.Animation.slide_out_right);
                     viewFlipper.ShowPrevious();
                 };
 
                 buttonNext.Click += delegate
                 {
-                    viewFlipper.SetInAnimation(this, Android.Resource.Animation.SlideInLeft);
-                    viewFlipper.SetInAnimation(this, Android.Resource.Animation.SlideOutRight);
+                    viewFlipper.SetInAnimation(this, Resource.Animation.slide_in_right);
+                    viewFlipper.SetInAnimation(this, Resource.Animation.slide_out_left);
                     viewFlipper.ShowNext();
                 };
 
                 var tv_ExName = FindViewById<TextView>(Resource.Id.btn_workout);
                 //tv_ExName.SetText(currentExercise.Name);
 
-                currentExercise = await GetSelectedExercise(selectedExerise);
+                currentExercise = await GetSelectedExercise(selectedExercise);
 
-                List<ExerciseStep> steps = new List<ExerciseStep>();
-                var step1 = new ExerciseStep()
-                {
-                    Description = "Ana are mere si pere",
-                    Picture = "burpees_1"
-                };
-                steps.Add(step1);
+                List<ExerciseStep> steps = await GetSelectedExerciseSteps();
+                //var step1 = new ExerciseStep()
+                //{
+                //    Description = "Ana are mere si pere",
+                //    Picture = "burpees_1"
+                //};
+                //steps.Add(step1);
 
-                var step2 = new ExerciseStep()
-                {
-                    Description = "Dana are mere si pere",
-                    Picture = "burpees_2"
-                };
-                steps.Add(step2);
+                //var step2 = new ExerciseStep()
+                //{
+                //    Description = "Dana are mere si pere",
+                //    Picture = "burpees_2"
+                //};
+                //steps.Add(step2);
 
                 LayoutInflater inflater = (LayoutInflater)this.GetSystemService(Context.LayoutInflaterService);
                 foreach (var entry in steps)
@@ -101,6 +97,20 @@ namespace SocialIntegration.Activities
             {
                 ex.ToString();
             }
+        }
+
+        private async Task<List<ExerciseStep>> GetSelectedExerciseSteps()
+        {
+            List<ExerciseStep> steps = null;
+            try
+            {
+                steps = await MyApplication.sqLConnection.Table<ExerciseStep>().Where(st => st.ExerciseID == currentExercise.ID).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+            return steps;
         }
 
         private void SetUpGesture()
@@ -155,11 +165,11 @@ namespace SocialIntegration.Activities
             return false;
         }
 
-        private async Task<Exercise> GetSelectedExercise(int selectedExeriseId)
+        private async Task<Exercise> GetSelectedExercise(int selectedExerciseId)
         {
             try
             {
-                var result = MyApplication.sqLConnection.Table<Exercise>().Where(ex => ex.ID == selectedExeriseId).FirstOrDefaultAsync().Result;
+                var result = MyApplication.sqLConnection.Table<Exercise>().Where(ex => ex.ID == selectedExerciseId).FirstOrDefaultAsync().Result;
                 return result;
             }
             catch (Exception ex)

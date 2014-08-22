@@ -14,7 +14,9 @@ namespace SocialIntegration.Models
 {
     public class ExerciseStep
     {
+        public int ID { get; set; }
         public string Picture { get; set; }
         public string Description { get; set; }
+        public int ExerciseID { get; set; }
     }
 }

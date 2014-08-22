@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_timerActivity_relativeLayout"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -13,36 +14,51 @@
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:layout_above="@+id/ll_timer" />-->
-    <TextView
-        android:id="@+id/tv_timer_countdown"
+<!--<Chronometer
+        android:id="@+id/tv_timerActivity_chronometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:paddingRight="10dip"
-        android:textSize="50dp"
-        android:text="00:30" />
+        android:textSize="50dp" />-->
+    <TextView
+        android:id="@+id/tv_timerActivity_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="10dip"
+        android:textSize="80dp" />
     <LinearLayout
-        android:id="@+id/ll_timer"
+        android:id="@+id/ll_timerActivity_linearLayout"
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/btn_timerActivity_1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="#777f20"
-            android:text="END WORKOUT"
+            android:text="START"
             android:background="@drawable/timerButton1_background" />
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_timerActivity_2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="#777f20"
-            android:text="PAUSE"
+            android:text="STOP"
             android:background="@drawable/timerButton2_background" />
+        <Button
+            android:id="@+id/btn_timerActivity_3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#777f20"
+            android:text="RESTART"
+            android:background="@drawable/timerButton3_background" />
     </LinearLayout>
 </RelativeLayout>

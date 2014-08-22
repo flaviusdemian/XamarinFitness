@@ -19,5 +19,7 @@ namespace SocialIntegration
         public static string APP_NAME = "Xamarin.Fitness";
 
         public static string DB_INIT_KEY = "DbInitialized";
+
+        public static string SelectedExercise = "selectedExercise";
     }
 }

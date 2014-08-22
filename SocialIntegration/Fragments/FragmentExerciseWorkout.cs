@@ -53,12 +53,12 @@ namespace SocialIntegration.Fragments
                 }
 
                 Button btn = rootView.FindViewById<Button>(Resource.Id.btn_workout);
-                btn.Click += (sender, args) =>
-                {
-                    //var destinationActivity = new Intent(SherlockActivity, typeof(ExerciseDescription));
-                    //destinationActivity.PutExtra("selectedExerise", "");
-                    //SherlockActivity.StartActivity(destinationActivity);
-                };
+                btn.Click += (sender, args) => SherlockActivity.StartActivity(typeof(TimerActivity));
+                //{
+                //    var destinationActivity = new Intent(SherlockActivity, typeof(ExerciseDescription));
+                //    destinationActivity.PutExtra("selectedExerise", "");
+                //    SherlockActivity.StartActivity(destinationActivity);
+                //};
             }
             catch (Exception ex)
             {
@@ -69,7 +69,9 @@ namespace SocialIntegration.Fragments
         void lv_searchResults_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             var destinationActivity = new Intent(SherlockActivity, typeof(ExerciseDescription));
-            destinationActivity.PutExtra("selectedExerise", e.Position);
+            int currentExerciseID = e.Position + 1;
+
+            destinationActivity.PutExtra(Constants.SelectedExercise, currentExerciseID);
             SherlockActivity.StartActivity(destinationActivity);
 
         }

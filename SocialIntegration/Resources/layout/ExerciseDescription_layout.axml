@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:layout_marginBottom="14dp"
-        android:text="Stand tall. Drop to a squat with your hands on the ground outside of your feet. Then jump your feet back, putting yourself into a planq.Jump your feet forward to a squat and leap up or stand up. Repeat. Add a pushup if you want!"
+        android:text="Full body strength and aerobic exercise."
         android:textColor="#3f3f3f"
         android:textSize="14dp" />
     <LinearLayout
