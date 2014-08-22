@@ -109,6 +109,7 @@
     <AndroidAsset Include="Assets\Roboto-Thin.ttf" />
     <AndroidAsset Include="Assets\RobotoCondensed-Regular.ttf" />
     <AndroidAsset Include="Assets\db" />
+    <AndroidAsset Include="Assets\digital-7 %28mono%29.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\InitialScreen.axml">
@@ -261,13 +262,35 @@
     <AndroidResource Include="Resources\drawable\timerButton2_layer2.xml" />
     <AndroidResource Include="Resources\drawable\timerButton2_background.xml" />
     <AndroidResource Include="Resources\drawable\video_icon.png" />
-    <AndroidResource Include="Resources\drawable\slide_in_left.xml" />
-    <AndroidResource Include="Resources\drawable\slide_in_right.xml" />
-    <AndroidResource Include="Resources\drawable\slide_out_left.xml" />
-    <AndroidResource Include="Resources\drawable\slide_out_right.xml" />
+    <AndroidResource Include="Resources\anim\slide_in_left.xml" />
+    <AndroidResource Include="Resources\anim\slide_in_right.xml" />
+    <AndroidResource Include="Resources\anim\slide_out_left.xml" />
+    <AndroidResource Include="Resources\anim\slide_out_right.xml" />
     <AndroidResource Include="Resources\drawable\burpees_1.jpg" />
     <AndroidResource Include="Resources\drawable\burpees_2.jpg" />
     <AndroidResource Include="Resources\drawable\burpees_3.jpg" />
+    <AndroidResource Include="Resources\drawable\plank_1.jpg" />
+    <AndroidResource Include="Resources\drawable\plank_2.jpg" />
+    <AndroidResource Include="Resources\drawable\plank_3.jpg" />
+    <AndroidResource Include="Resources\drawable\push_ups_1.jpg" />
+    <AndroidResource Include="Resources\drawable\push_ups_2.jpg" />
+    <AndroidResource Include="Resources\drawable\push_ups_3.jpg" />
+    <AndroidResource Include="Resources\drawable\squats_1.jpg" />
+    <AndroidResource Include="Resources\drawable\squats_2.jpg" />
+    <AndroidResource Include="Resources\drawable\squats_3.jpg" />
+    <AndroidResource Include="Resources\drawable\hip_llifts_1.jpg" />
+    <AndroidResource Include="Resources\drawable\hip_llifts_2.jpg" />
+    <AndroidResource Include="Resources\drawable\hip_llifts_3.jpg" />
+    <AndroidResource Include="Resources\drawable\light_jog_1.jpg" />
+    <AndroidResource Include="Resources\drawable\light_jog_2.jpg" />
+    <AndroidResource Include="Resources\drawable\back_pedal_1.jpg" />
+    <AndroidResource Include="Resources\drawable\back_pedal_2.jpg" />
+    <AndroidResource Include="Resources\drawable\back_pedal_3.jpg" />
+    <AndroidResource Include="Resources\drawable\cool_down_1.jpg" />
+    <AndroidResource Include="Resources\drawable\cool_down_2.jpg" />
+    <AndroidResource Include="Resources\drawable\timerButton3_layer1.xml" />
+    <AndroidResource Include="Resources\drawable\timerButton3_layer2.xml" />
+    <AndroidResource Include="Resources\drawable\timerButton3_background.xml" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="sqlite-net">

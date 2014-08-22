@@ -35,6 +35,7 @@ D:\Proiecte\Android Application\Xamarin_Fitness_App\XamarinFitness\SocialIntegra
 D:\Proiecte\Android Application\Xamarin_Fitness_App\XamarinFitness\SocialIntegrationCore\bin\Debug\Xamarin.Social.Android.dll
 D:\Proiecte\Android Application\Xamarin_Fitness_App\XamarinFitness\SocialIntegrationCore\bin\Debug\Xamarin.Auth.Android.xml
 D:\Proiecte\Android Application\Xamarin_Fitness_App\XamarinFitness\SocialIntegrationCore\bin\Debug\Xamarin.Social.Android.xml
+D:\Proiecte\Android Application\Xamarin_Fitness_App\XamarinFitness\SocialIntegrationCore\obj\Debug\SocialIntegrationCore.csprojResolveAssemblyReference.cache
 D:\Proiecte\Android Application\Xamarin_Fitness_App\XamarinFitness\SocialIntegrationCore\obj\Debug\SocialIntegrationCore.dll
 D:\Proiecte\Android Application\Xamarin_Fitness_App\XamarinFitness\SocialIntegrationCore\obj\Debug\SocialIntegrationCore.pdb
 D:\Proiecte\Android Application\Xamarin_Fitness_App\XamarinFitness\SocialIntegrationCore\obj\Debug\android\bin\SocialIntegrationCore.SocialIntegrationCore.apk
