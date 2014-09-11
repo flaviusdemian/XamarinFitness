@@ -102,5 +102,7 @@ namespace SocialIntegration.Application
             }
             return 0;
         }
+
+        public static List<Exercise> Exercises { get; set; }
     }
 }

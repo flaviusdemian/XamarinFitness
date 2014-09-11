@@ -7,29 +7,85 @@
     android:minWidth="25px"
     android:minHeight="25px"
     android:background="@drawable/background">
-<!--<ListView
-        android:id="@+id/lv_timer"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="wrap_content"
+<!--RelativeLayout Row 1-->
+    <RelativeLayout
+        android:id="@+id/rl_timerActivity_row_1"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:id="@+id/tv_timerActivity_text_row_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10dip"
+            android:textSize="20dp"
+            android:text="Workout Duration:" />
+        <TextView
+            android:id="@+id/tv_timerActivity_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dip"
+            android:textSize="40dp"
+            android:layout_below="@+id/tv_timerActivity_text_row_1" />
+    </RelativeLayout>
+<!--RelativeLayout Row 2-->
+    <RelativeLayout
+        android:id="@+id/rl_timerActivity_row_2"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_above="@+id/ll_timer" />-->
-<!--<Chronometer
-        android:id="@+id/tv_timerActivity_chronometer"
-        android:layout_width="wrap_content"
+        android:layout_below="@+id/rl_timerActivity_row_1"
+        android:layout_above="@+id/rl_timerActivity_row_3">
+        <ImageView
+            android:id="@+id/iv_timerActivity_image_row_2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:alpha=".4" />
+        <TextView
+            android:id="@+id/tv_timerActivity_text_row_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/tv_timerActivity_timer_large"
+            android:textSize="20dp"
+            android:text="Push-ups" />
+        <TextView
+            android:id="@+id/tv_timerActivity_timer_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="10dip"
+            android:textSize="80dp"
+            android:text="05:00" />
+    </RelativeLayout>
+<!--RelativeLayout Row 3-->
+    <RelativeLayout
+        android:id="@+id/rl_timerActivity_row_3"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:paddingRight="10dip"
-        android:textSize="50dp" />-->
-    <TextView
-        android:id="@+id/tv_timerActivity_timer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:paddingTop="10dip"
-        android:textSize="80dp" />
+        android:layout_margin="10dp"
+        android:layout_above="@+id/ll_timerActivity_linearLayout"
+        android:background="#DDDDDD">
+        <TextView
+            android:id="@+id/tv_timerActivity_description_row_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="10dip"
+            android:textSize="20dp" />
+        <ImageView
+            android:id="@+id/iv_timerActivity_image_row_3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+<!--LinearLayout-->
     <LinearLayout
         android:id="@+id/ll_timerActivity_linearLayout"
         android:orientation="horizontal"

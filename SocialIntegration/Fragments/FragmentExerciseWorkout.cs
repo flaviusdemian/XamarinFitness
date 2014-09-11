@@ -43,8 +43,8 @@ namespace SocialIntegration.Fragments
         {
             try
             {
-                var exercises = await LoadExercises();
-                ExerciseAdapter adapter = new ExerciseAdapter(SherlockActivity, Resource.Layout.Exercise_layout_row, exercises);
+                MyApplication.Exercises = await LoadExercises();
+                ExerciseAdapter adapter = new ExerciseAdapter(SherlockActivity, Resource.Layout.Exercise_layout_row, MyApplication.Exercises);
                 lv_searchResults = rootView.FindViewById<ListView>(Resource.Id.lv_exercise_layout);
                 if (adapter != null && lv_searchResults != null)
                 {

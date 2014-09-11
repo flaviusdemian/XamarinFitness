@@ -18,7 +18,7 @@ namespace SocialIntegration.Models
         public string Name { get; set; }
         public string Difficulty { get; set; }
         public float Rating { get; set; }
-        public string Duration { get; set; }   
+        public int Duration { get; set; }   
         public string Picture { get; set; }        
     }
 }

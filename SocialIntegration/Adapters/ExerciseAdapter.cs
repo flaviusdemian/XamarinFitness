@@ -95,7 +95,7 @@ namespace SocialIntegration.Adapters
 
                     if (holder.TvDuration != null)
                     {
-                        holder.TvDuration.Text = currentItem.Duration;
+                        holder.TvDuration.Text = currentItem.Duration.ToString();
                     }
                     if (holder.IvPicture != null)
                     {

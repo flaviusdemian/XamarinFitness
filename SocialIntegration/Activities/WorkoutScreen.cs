@@ -23,7 +23,7 @@ using FragmentTransaction = Android.Support.V4.App.FragmentTransaction;
 
 namespace SocialIntegration
 {
-    [Activity(Label = "Workout Screen", MainLauncher = false, Icon = "@drawable/icon")]
+    [Activity(Label = "Workout Screen", MainLauncher = true, Icon = "@drawable/icon")]
     public class WorkoutScreen : SlidingMenuParentActivity
     {
         public static FragmentExerciseWorkout fragmentSample = new FragmentExerciseWorkout();
